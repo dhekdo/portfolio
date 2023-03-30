@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:800");
+* {
+  box-sizing: border;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  background: #EFEFEF;
+  cursor: pointer;
+}
+
+html {
+  height: 100%;
+  display: flex;
+}
+
+body {
+  margin: auto;
+  overflow: hidden;
+}
+
+#text {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
+  font-size: 8vw;
+  transform: skewY(-5deg);
+  visibility: hidden;
+  color: #002C3E;
+  animation: display 1s cubic-bezier(0.6, 0, 0.15, 1) 4s forwards;
+  position: relative;
+}
+
+#text:before,
+#text:after {
+  content: attr(data-text);
+  visibility: visible;
+  color: #ed3833;
+  position: absolute;
+  left: 0;
+  display: block;
+  top: auto;
+  bottom: 0;
+  z-index: 3;
+}
+
+#text:before {
+  color: #a7a7a2;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+          clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  animation: move-left 2.5s cubic-bezier(0.6, 0, 0.15, 1), blur 1s linear 3s forwards;
+}
+
+#text:after {
+  color: #d9d9d6;
+  -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+          clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  animation: move-right 3s cubic-bezier(0.6, 0, 0.15, 1), blur 1s linear 3s forwards;
+}
+
+@keyframes move-left {
+  from {
+    transform: translate(-1000%, -120%);
+  }
+  50% {
+    transform: translate(0%, -120%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes move-right {
+  from {
+    transform: translate(1000%, 80%);
+  }
+  50% {
+    transform: translate(0%, 80%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes blur {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes display {
+  from {
+    visibility: hidden;
+    transform: skewY(-5deg) scale(0);
+  }
+  to {
+    visibility: visible;
+    transform: skewY(-5deg) scale(1);
+  }
+}
+.scroll_icon {
+  display: inline-block;
+  width: 35px;
+  height: 50px;
+  border: 2px solid #333;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.scroll_icon span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 100%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  animation: mouseDown 1.2s infinite;
+}
+@keyframes mouseDown {
+  0% {
+    top: 20%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+.fa-angles-down {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+}
+
+@keyframes arrowDown {
+  0% {
+    bottom: 2%;
+  }
+  100% {
+    bottom: 1%;
+  }
+}
