@@ -1,23 +1,53 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:800");
+
 * {
   box-sizing: border;
   padding: 0;
   margin: 0;
 }
 
-html, body {
+html,
+body {
   background: #EFEFEF;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 
 html {
   height: 100%;
   display: flex;
+  position: relative;
 }
 
 body {
-  margin: auto;
+  margin: 0 auto;
   overflow: hidden;
+}
+
+/* 섹션이동 */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 인트로 */
+.intro {
+  position: relative;
 }
 
 #text {
@@ -29,6 +59,7 @@ body {
   color: #002C3E;
   animation: display 1s cubic-bezier(0.6, 0, 0.15, 1) 4s forwards;
   position: relative;
+  cursor: pointer;
 }
 
 #text:before,
@@ -42,19 +73,21 @@ body {
   top: auto;
   bottom: 0;
   z-index: 3;
+  cursor: pointer;
+  width: 100%;
 }
 
 #text:before {
   color: #a7a7a2;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-          clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
   animation: move-left 2.5s cubic-bezier(0.6, 0, 0.15, 1), blur 1s linear 3s forwards;
 }
 
 #text:after {
   color: #d9d9d6;
   -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-          clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
   animation: move-right 3s cubic-bezier(0.6, 0, 0.15, 1), blur 1s linear 3s forwards;
 }
 
@@ -62,42 +95,52 @@ body {
   from {
     transform: translate(-1000%, -120%);
   }
+
   50% {
     transform: translate(0%, -120%);
   }
+
   100% {
     transform: translate(0%, 0%);
   }
 }
+
 @keyframes move-right {
   from {
     transform: translate(1000%, 80%);
   }
+
   50% {
     transform: translate(0%, 80%);
   }
+
   100% {
     transform: translate(0%, 0%);
   }
 }
+
 @keyframes blur {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
 }
+
 @keyframes display {
   from {
     visibility: hidden;
     transform: skewY(-5deg) scale(0);
   }
+
   to {
     visibility: visible;
     transform: skewY(-5deg) scale(1);
   }
 }
+
 .scroll_icon {
   display: inline-block;
   width: 35px;
@@ -109,6 +152,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .scroll_icon span {
   display: inline-block;
   width: 6px;
@@ -121,10 +165,12 @@ body {
   transform: translate(-50%, -10%);
   animation: mouseDown 1.3s infinite;
 }
+
 @keyframes mouseDown {
   0% {
     top: 20%;
   }
+
   100% {
     top: 30%;
   }
@@ -142,6 +188,7 @@ body {
   0% {
     bottom: 2%;
   }
+
   100% {
     bottom: 1%;
   }

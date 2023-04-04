@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,35 @@
     <title>오다애's PORTFOLIO</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> 버튼css -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 </head>
+
 <body>
-    <div class="intro">
-        <div id ="text">DA AE's PORTFOLIO</div>
-        <div class="scroll_icon">
-            <span></span>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide intro">
+                <div id ="text">DA AE's PORTFOLIO</div>
+                <div class="scroll_icon">
+                    <span></span>
+                </div>
+                <i class="fa-solid fa-angles-down"></i>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <!-- <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div> -->
         </div>
-        <i class="fa-solid fa-angles-down"></i>
+        <!-- <div class="swiper-pagination"></div> 버튼 -->
     </div>
 
     <script src="js/index.js"></script>
 </body>
+
 </html>
