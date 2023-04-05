@@ -62,6 +62,23 @@ if( size1 > size2 ){
 }
 });
 
+// 버튼 클릭시 홈페이지 이동
 $(".btn1").click(function(){
-  alert("dd");
-});
+  window.open("https://dhekdo.github.io/project_1/", '_blank');
+})
+
+$(".btn2").click(function(){
+  window.open("https://dhekdo.github.io/project_2/", '_blank');
+})
+
+$(".btn3").click(function(){
+  window.open("https://dhekdo.github.io/project_3/", '_blank');
+})
+
+$(".btn4").click(function(){
+  window.open("https://dhekdo.github.io/project_4/", '_blank');
+})
+
+$(".btn5").click(function(){
+  window.open("https://dhekdo.github.io/project_5/", '_blank');
+})
