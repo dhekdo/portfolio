@@ -214,9 +214,21 @@ body {
   width: 15vw;
   height: 75vh;
   background-position: center;
-  background-size: 75vh;
+  background-size: cover;
   margin: 1vw;
   border-radius: 3vw;
   display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.item button {
+  position: absolute;
+  top: 50%;
+  left: 50;
+  transform: translate(-50%,-50%);
+  display: none;
+  padding: 10px;
+  font-size: 20px;
   cursor: pointer;
 }
