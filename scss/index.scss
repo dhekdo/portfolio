@@ -1,4 +1,3 @@
-// 인트로
 $background: #EFEFEF;
 $colorOne : #ed3833;
 $mainColor:#002C3E;
@@ -11,14 +10,43 @@ $mainColor:#002C3E;
 
 html, body { 
   background: $background;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 html { 
-  height: 100%; display: flex; 
+  height: 100%;
+  display: flex;
+  position: relative;
 }
 body { 
-  margin: auto; 
+  margin: 0 auto;
   overflow: hidden;
+}
+
+// 섹션이동
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// 인트로
+.intro {
+  position: relative;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:800');
@@ -32,6 +60,7 @@ body {
   color:$mainColor;
   animation : display 1s cubic-bezier(.6,.0,.15,1) 4s forwards;
   position: relative;
+  cursor: pointer;
   }
   
   #text:before,
@@ -45,6 +74,8 @@ body {
     top: auto;
     bottom: 0;
     z-index: 3;
+    cursor: pointer;
+    width: 100%;
   }
   
   #text:before {
@@ -102,8 +133,7 @@ body {
     }
   }
 
-
-//   스크롤 아이콘
+// 스크롤 아이콘
 .scroll_icon {
     display: inline-block;
     width: 35px;
@@ -158,4 +188,127 @@ body {
     }
 }
 
- 
+// 프로젝트
+.group_wrap {
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+
+  .group {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+
+    .item {
+      width: 15vw;
+      height: 74.7vh;
+      background-position: center;
+      background-size: cover;
+      margin: 1vw;
+      border-radius: 3vw;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      button {
+        position: absolute;
+        bottom: 10%;
+        left: 50;
+        transform: translate(-50%,-50%);
+        display: none;
+        padding: 15px 20px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        border: 2px solid #EFEFEF;
+        color: #EFEFEF;
+        border-radius: 15px;
+        background-color: rgba(0,0,0,0);
+
+        &.btn3, &.btn4, &.btn5 {
+          color: #EFEFEF;
+          mix-blend-mode: difference;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+        
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &::after {
+          content: " \f35d";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 25px;
+        transform: rotate(-10deg);
+        color: #fff;
+        text-shadow: 1px 1px 1px #a7a7a2;
+
+       &:hover {
+        
+        span{
+          animation: shake 0.5s infinite;
+        }
+        
+        @keyframes shake {
+          0% {
+            transform: translate(1px, -2px) rotate(-1deg);
+          }
+          10% {
+            transform: translate(-1px, 2px) rotate(-1deg);
+          }
+          20% {
+            transform: translate(1px, 2px) rotate(0deg);
+          }
+          30% {
+            transform: translate(3px, 2px) rotate(0deg);
+          }
+          40% {
+            transform: translate(1px, -1px) rotate(1deg);
+          }
+          50% {
+            transform: translate(-1px, -2px) rotate(-1deg);
+          }
+          60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+          }
+          70% {
+            transform: translate(3px, 1px) rotate(-1deg);
+          }
+          80% {
+            transform: translate(-1px, -1px) rotate(1deg);
+          }
+          90% {
+            transform: translate(-3px, 0px) rotate(1deg);
+          }
+          100% {
+            transform: translate(1px, 1px) rotate(0deg);
+          }
+        }
+       }
+      }
+
+      
+    }
+  }
+}
+
