@@ -5,7 +5,8 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   background: #EFEFEF;
   width: 100%;
   height: 100%;
@@ -204,8 +205,16 @@ body {
   opacity: 0.9;
 }
 .group_wrap .group .item:hover span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 25px;
+  transform: rotate(-10deg);
+  color: #fff;
+  text-shadow: 1px 1px 1px #a7a7a2;
   animation: shake 0.7s infinite;
-  opacity: 1;
 }
 @keyframes shake {
   0% {
@@ -273,14 +282,5 @@ body {
   font-weight: 900;
 }
 .group_wrap .group .item span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 25px;
-  transform: rotate(-10deg);
-  color: #fff;
-  text-shadow: 1px 1px 1px #a7a7a2;
-  opacity: 0.8;
+  display: none;
 }
