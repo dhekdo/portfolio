@@ -204,7 +204,8 @@ body {
   opacity: 0.9;
 }
 .group_wrap .group .item:hover span {
-  animation: shake 0.5s infinite;
+  animation: shake 0.7s infinite;
+  opacity: 1;
 }
 @keyframes shake {
   0% {
@@ -281,4 +282,5 @@ body {
   transform: rotate(-10deg);
   color: #fff;
   text-shadow: 1px 1px 1px #a7a7a2;
+  opacity: 0.8;
 }
