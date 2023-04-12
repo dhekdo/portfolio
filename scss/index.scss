@@ -167,7 +167,7 @@ body {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -10%);
-    animation: mouseDown 1.3s infinite;
+    animation: mouseDown 1.7s infinite;
   }
 
   @keyframes mouseDown {
@@ -176,7 +176,7 @@ body {
     }
 
     100% {
-      top: 30%;
+      top: 33%;
     }
   }
 }
@@ -187,7 +187,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #333;
-  // animation: arrowDown 1.5s infinite;
+  animation: arrowDown 1.7s infinite;
 }
 
 @keyframes arrowDown {
@@ -196,7 +196,7 @@ body {
   }
 
   100% {
-    bottom: 1%;
+    bottom: 1.3%;
   }
 }
 
@@ -240,7 +240,7 @@ body {
         transform: rotate(-10deg);
         color: #fff;
         text-shadow: 1px 1px 1px #a7a7a2;
-        animation: shake 0.7s infinite;
+        animation: shake 1s infinite;
 
 
         @keyframes shake {
