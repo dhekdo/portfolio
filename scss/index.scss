@@ -1,202 +1,110 @@
-$background: #EFEFEF;
-$colorOne : #ed3833;
-$mainColor: #002C3E;
-
 * {
-  box-sizing: border;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  cursor: url(../img/cur.png) 64 64, auto;
 }
 
-html,
+ul, li, ol {
+  list-style: none;
+}
+
 body {
-  background: $background;
+  font: normal 75% Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+
+// 파티클
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  background-color: #232741;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 50%;
 }
 
-html {
-  height: 100%;
-  display: flex;
-  position: relative;
+/* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
-body {
-  margin: 0 auto;
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
   overflow: hidden;
 }
 
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
 // 섹션이동
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
 .swiper {
   width: 100%;
   height: 100%;
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+  color: #fff;
 }
 
-// 인트로
-.intro {
-  position: relative;
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:800');
-
-#text {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 800;
-  font-size: 8vw;
-  transform: skewY(-5deg);
-  visibility: hidden;
-  color: $mainColor;
-  animation: display 1s cubic-bezier(.6, .0, .15, 1) 4s forwards;
-  position: relative;
-  cursor: pointer;
-}
-
-#text:before,
-#text:after {
-  content: attr(data-text);
-  visibility: visible;
-  color: $colorOne;
-  position: absolute;
-  left: 0;
+.swiper-slide img {
   display: block;
-  top: auto;
-  bottom: 0;
-  z-index: 3;
-  cursor: pointer;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#text:before {
-  color: lighten(#a7a7a2, 0%);
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-  animation: move-left 2.5s cubic-bezier(.6, .0, .15, 1),
-    blur 1s linear 3s forwards;
-}
+.swiper-pagination {
+  margin-right: 60px;
 
-#text:after {
-  color: lighten(#a7a7a2, 20%);
-  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-  animation: move-right 3s cubic-bezier(.6, .0, .15, 1),
-    blur 1s linear 3s forwards;
-}
-
-@keyframes move-left {
-  from {
-    transform: translate(-1000%, -120%);
-  }
-
-  50% {
-    transform: translate(0%, -120%);
-  }
-
-  100% {
-    transform: translate(0%, 0%);
-  }
-}
-
-@keyframes move-right {
-  from {
-    transform: translate(1000%, 80%);
-  }
-
-  50% {
-    transform: translate(0%, 80%);
-  }
-
-  100% {
-    transform: translate(0%, 0%);
-  }
-}
-
-@keyframes blur {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes display {
-  from {
-    visibility: hidden;
-    transform: skewY(-5deg) scale(0);
-  }
-
-  to {
-    visibility: visible;
-    transform: skewY(-5deg) scale(1);
-  }
-}
-
-// 스크롤 아이콘
-.scroll_icon {
-  display: inline-block;
-  width: 35px;
-  height: 50px;
-  border: 2px solid #333;
-  border-radius: 20px;
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  span {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: #333;
-    border-radius: 100%;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    animation: mouseDown 1.7s infinite;
-  }
-
-  @keyframes mouseDown {
-    0% {
-      top: 20%;
-    }
-
-    100% {
-      top: 33%;
-    }
-  }
-}
-
-.fa-angles-down {
-  position: absolute;
-  bottom: 2%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #333;
-  animation: arrowDown 1.7s infinite;
-}
-
-@keyframes arrowDown {
-  0% {
-    bottom: 2%;
-  }
-
-  100% {
-    bottom: 1.3%;
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    cursor: url(../img/cur.png) 64 64, auto !important;
+    background-color: #fff;
   }
 }
 
@@ -213,6 +121,10 @@ body {
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .item {
       width: 15vw;
@@ -222,12 +134,22 @@ body {
       margin: 1vw;
       border-radius: 3vw;
       display: inline-block;
-      cursor: pointer;
+      // cursor: pointer;
       position: relative;
+      opacity: 0.9;
+      animation: wave 1.5s linear alternate infinite;
+
+      @keyframes wave {
+        0% {
+          transform: translate(-2px, -4px);
+        }
+        100% {
+          transform: translate(1px, 4px);
+        }
+      }
 
       &:hover {
-        opacity: 0.9;
-
+        opacity: 1;
       }
 
       &:hover span {
@@ -240,7 +162,8 @@ body {
         transform: rotate(-10deg);
         color: #fff;
         text-shadow: 1px 1px 1px #a7a7a2;
-        animation: shake 1s infinite;
+        animation: shake 2s infinite;
+        
 
 
         @keyframes shake {
@@ -292,14 +215,14 @@ body {
 
       button {
         position: absolute;
-        bottom: 10%;
+        bottom: 7%;
         left: 50;
         transform: translate(-50%, -50%);
         display: none;
         padding: 15px 20px;
         font-size: 15px;
         font-weight: bold;
-        cursor: pointer;
+        // cursor: pointer;
         border: 2px solid #EFEFEF;
         color: #EFEFEF;
         border-radius: 15px;

@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> 버튼css -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- 파티클 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- 섹션이동 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- 프로젝트 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC2RL6BN5Z"></script>
     <script>
@@ -23,18 +25,31 @@
 
         gtag('config', 'G-NC2RL6BN5Z');
     </script>
-
 </head>
 
 <body>
+    <!-- 파티클 -->
+    <div id="particles-js"></div>
+    <!-- 프로젝트 -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide intro">
-                <div id="text">DA AE's PORTFOLIO</div>
-                <div class="scroll_icon">
-                    <span></span>
-                </div>
-                <i class="fa-solid fa-angles-down"></i>
+            <div class="swiper-slide">
+                <!-- <div class="wave_wrap">
+                    <span>D</span>
+                    <span>A</span>
+                    <span>&nbsp A</span>
+                    <span>E</span>
+                    <span>'S</span><br>
+                    <span>P</span>
+                    <span>O</span>
+                    <span>R</span>
+                    <span>T</span>
+                    <span>F</span>
+                    <span>O</span>
+                    <span>L</span>
+                    <span>I</span>
+                    <span>O</span>
+                </div> -->
             </div>
             <div class="swiper-slide group_wrap">
                 <div class="group">
@@ -61,17 +76,19 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div> -->
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
             <!-- <div class="swiper-slide">Slide 5</div>
             <div class="swiper-slide">Slide 6</div>
             <div class="swiper-slide">Slide 7</div>
             <div class="swiper-slide">Slide 8</div>
             <div class="swiper-slide">Slide 9</div> -->
         </div>
-        <!-- <div class="swiper-pagination"></div> 버튼 -->
+        <div class="swiper-pagination"></div>
     </div>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 

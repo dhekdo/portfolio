@@ -1,3 +1,60 @@
+// 파티클
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 160, density: { enable: true, value_area: 800 } },
+    color: { value: "#ffffff" },
+    shape: {
+      type: "circle",
+      stroke: { width: 0, color: "#000000" },
+      polygon: { nb_sides: 5 },
+      image: { src: "img/github.svg", width: 100, height: 100 }
+    },
+    opacity: {
+      value: 1,
+      random: true,
+      anim: { enable: true, speed: 1, opacity_min: 0, sync: false }
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: { enable: false, speed: 4, size_min: 0.3, sync: false }
+    },
+    line_linked: {
+      enable: false,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1,
+      direction: "none",
+      random: true,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: { enable: false, rotateX: 600, rotateY: 600 }
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "bubble" },
+      onclick: { enable: true, mode: "repulse" },
+      resize: true
+    },
+    modes: {
+      grab: { distance: 400, line_linked: { opacity: 1 } },
+      bubble: { distance: 100, size: 0, duration: 2, opacity: 0.7, speed: 3 },
+      // repulse: { distance: 400, duration: 0.4 },
+      push: { particles_nb: 4 },
+      remove: { particles_nb: 2 }
+    }
+  },
+  retina_detect: true
+});
+
 // 섹션이동
 var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
@@ -10,20 +67,6 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// 인트로
-let text = document.querySelector('#text');
-
-text.setAttribute('data-text',text.innerHTML);
-
-// document.body.innerHTML += '<div style="position: absolute; bottom: 0; left: 0; right: 0; padding: .5em; font-size: 12px; font-family: monospace; text-align: center; pointer-event: none;">Click anywhere to re-run</div>';
-
-var lr = document.querySelector('#text');
-window.addEventListener('click',()=>{
-  var newone = text.cloneNode(true); 
-  lr.parentNode.replaceChild(newone, lr);
-  lr = newone;
-});
-
 // 프로젝트
 const items = document.querySelectorAll(".item");
 
@@ -34,14 +77,14 @@ const expand = (item, i) => {
   });
   gsap.to(items, {
     width: item.clicked ? "15vw" : "8vw",
-    duration: 2,
+    duration: 3.7,
     ease: "elastic(1, .6)"
   });
 
   item.clicked = !item.clicked;
   gsap.to(item, {
     width: item.clicked ? "42vw" : "15vw",
-    duration: 2.5,
+    duration: 4,
     ease: "elastic(1, .3)"
   });
 };
