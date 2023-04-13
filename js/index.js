@@ -46,7 +46,7 @@ particlesJS("particles-js", {
     },
     modes: {
       grab: { distance: 400, line_linked: { opacity: 1 } },
-      bubble: { distance: 250, size: 0, duration: 2, opacity: 0, speed: 3 },
+      bubble: { distance: 250, size: 1, duration: 2, opacity: 0.2, speed: 3 },
       repulse: { distance: 400, duration: 0.4 },
       push: { particles_nb: 4 },
       remove: { particles_nb: 2 }
@@ -65,9 +65,24 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  on: {
+    slideChange:function(){
+      var aa= this.activeIndex;
+      if( aa==1 ){
+        $(".swiper-wrapper").css({"z-index": "3"});
+      }else {
+        $(".swiper-wrapper").css({"z-index": "1"});
+      }
+    }
+  }
 });
 
+// if( $(".group_wrap").hasClass("swiper-slide-active")===true ){
+//   $(".group_wrap .group").css({opacity : 1});
+// }
+
 //인트로
+// 텍스트 애니메이션
 class FibonacciSphere {
   #points;
 
