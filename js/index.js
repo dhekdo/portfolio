@@ -67,11 +67,19 @@ var swiper = new Swiper(".mySwiper", {
   },
   on: {
     slideChange:function(){
-      var aa= this.activeIndex;
-      if( aa==1 ){
+      var sectionIndex= this.activeIndex;
+      if( sectionIndex==1 ){
         $(".swiper-wrapper").css({"z-index": "3"});
+        $(".rocket").css({opacity:0, transition:'all 1.5s'});
       }else {
         $(".swiper-wrapper").css({"z-index": "1"});
+        $(".rocket").css({opacity:1, transition:'all 1.5s'});
+      }
+      if( sectionIndex==0 ){
+        $(".swiper-pagination").css({opacity:0, transition : 'all 1s'});
+
+      }else {
+        $(".swiper-pagination").css({opacity:1, transition : 'all 1s'});
       }
     }
   }
