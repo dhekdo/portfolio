@@ -15,6 +15,7 @@ ul, li, ol {
 body {
   font: normal 75% Arial, Helvetica, sans-serif;
   background-color: #232741;
+  // background-color: #000;
 }
 
 // 파티클
@@ -69,8 +70,8 @@ body {
 
   .swiper-pagination-bullet {
     margin: 30px 0 !important;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     cursor: url(../img/cur.png) 64 64, auto !important;
     background-color: #fff;
 
@@ -81,10 +82,106 @@ body {
 }
 
 // 인트로
+// @import url('https://fonts.googleapis.com/css?family=Titan+One&display=swap');
+// :root{
+//   --fontFamily: 'Titan One', cursive;
+// }
+// @function rem($value) {
+//   @return unquote(($value/1px)/16+"rem");
+// }
+// $count:20;
+// $ease:ease-in-out;
+// $speed:2s;
+// $x-move:40px;
 
+// .container {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   margin: auto;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   transform-style:preserve-3d;
+//   transform:rotatex(-5deg) rotateY(-45deg);
+//   animation:move $speed * 10 $ease infinite;
+// }
+// .wave{
+//   font-family:var(--fontFamily);
+//   position:absolute;
+//   font-size:5rem;
+//   transform-style:preserve-3d;
+//   letter-spacing:1rem;
+//   font-weight:900;
+//   @for $i from 1 through $count{
+//     &:nth-child(#{$i}){
+//       transform: translatez(#{$i * -20px})  translateY(-$x-move) rotateX(15deg);
+//       animation:move-#{$i} $ease $speed infinite;
+//       animation-delay:#{$i * $speed / $count};
+//       $color:hsl($i * 270 / $count,100%,50%);
+//       color:$color;
+//       text-shadow:0px 0px darken($color,40%);
+//     }
+//   }
+// }
+// @for $i from 1 through $count{
+//   @keyframes move-#{$i}{
+//   0%,100%{
+//     transform:translatez(#{$i * -20px}) translateY(-$x-move) rotateX(15deg);
+//   }
+//   50%{
+//     transform:translatez(#{$i * -20px}) translateY($x-move) rotateX(-15deg);
+//   }
+// }
+// }
 
+// @keyframes move{
+//   0%,100%{
+//     transform:rotatex(-5deg) rotateY(-45deg) rotate(-36deg);
+//   }
+//   50%{
+//     transform:rotatex(-5deg) rotateY(-45deg) rotate(36deg);
+//   }
+// }
 
+@keyframes wave {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
 
+.title_wrap {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18rem;
+  font-weight: bold;
+  letter-spacing: -5.4rem;
+  color: #f5f5f5;
+  opacity: 0.9;
+
+  span {
+    display: inline-block;
+    text-shadow: 10px 15px 30px rgba(0,0,0,0.2);
+
+    &:nth-child(even) {
+      animation: wave 4s linear alternate infinite;
+    }
+
+    &:nth-child(odd) {
+      animation: wave 4s linear alternate-reverse infinite;
+    }
+    
+  }
+
+}
 
 // 프로젝트
 .group_wrap {
@@ -121,14 +218,7 @@ body {
         animation: wave 1.5s linear alternate infinite;
       }
 
-      @keyframes wave {
-        0% {
-          transform: translateY(-5px);
-        }
-        100% {
-          transform: translateY(5px);
-        }
-      }
+      
 
       &:hover {
         opacity: 1;

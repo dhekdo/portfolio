@@ -69,13 +69,44 @@ body {
 }
 .swiper-pagination .swiper-pagination-bullet {
   margin: 30px 0 !important;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   cursor: url(../img/cur.png) 64 64, auto !important;
   background-color: #fff;
 }
 .swiper-pagination .swiper-pagination-bullet:active {
   cursor: url(../img/cur_on.png) 50 50, auto !important;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+.title_wrap {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18rem;
+  font-weight: bold;
+  letter-spacing: -5.4rem;
+  color: #f5f5f5;
+  opacity: 0.9;
+}
+.title_wrap span {
+  display: inline-block;
+  text-shadow: 10px 15px 30px rgba(0, 0, 0, 0.2);
+}
+.title_wrap span:nth-child(even) {
+  animation: wave 4s linear alternate infinite;
+}
+.title_wrap span:nth-child(odd) {
+  animation: wave 4s linear alternate-reverse infinite;
 }
 
 .group_wrap {
@@ -111,14 +142,6 @@ body {
 }
 .group_wrap .group .item:nth-child(even) {
   animation: wave 1.5s linear alternate infinite;
-}
-@keyframes wave {
-  0% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(5px);
-  }
 }
 .group_wrap .group .item:hover {
   opacity: 1;
