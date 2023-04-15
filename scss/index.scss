@@ -1,10 +1,11 @@
-$smallFont : 'Noto Sans KR', sans-serif;
 @import url(//db.onlinewebfonts.com/c/2f8845bdde42e943355a39765c5be5c0?family=Druk+Wide+Web+Super);
 @import url(//db.onlinewebfonts.com/c/29800a9e7d146302b8ed9ad2f848db63?family=Druk+Wide+Web+Bold);
 
 @font-face {font-family: "Druk Wide Web Bold"; src: url("//db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.eot"); src: url("//db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.woff") format("woff"), url("//db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.svg#Druk Wide Web Bold") format("svg"); }
 
 @font-face {font-family: "Druk Wide Web Super"; src: url("//db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot"); src: url("//db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.woff") format("woff"), url("//db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.svg#Druk Wide Web Super") format("svg"); }
+
+$smallFont : 'Noto Sans KR', sans-serif;
 
 * {
     margin: 0;
@@ -32,13 +33,14 @@ header {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 99;
 
     .header_wrap {
         width: 95%;
         margin: 30px auto;
 
         .logo {
-            width: 100%;
+            width: 15%;
 
             .logo_text {
                 font-size: 2.8rem;
