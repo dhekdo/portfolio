@@ -34,7 +34,7 @@ header .header_wrap .logo {
   width: 15%;
 }
 header .header_wrap .logo .logo_text {
-  font-size: 3rem;
+  font-size: 3.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -89,6 +89,9 @@ header .header_wrap nav ul li {
   will-change: transform;
   transition: all 0.7s;
 }
+.main .main_link .title_wrap:not(:first-child) {
+  margin-top: -100px;
+}
 .main .main_link .title_wrap:hover {
   transform: rotate3d(0, 1, 0, -35deg) translateZ(0) scale(1);
 }
@@ -106,6 +109,9 @@ header .header_wrap nav ul li {
   text-transform: uppercase;
   font-family: "Black Han Sans", sans-serif;
   position: relative;
+}
+.main .main_link .title_wrap .title a p {
+  margin-top: -100px;
 }
 .main .main_link .title_wrap .title a span::before {
   content: attr(data-info);
@@ -132,7 +138,7 @@ header .header_wrap nav ul li {
   content: "";
   display: inline-block;
   width: 2px;
-  height: 11rem;
+  height: 13.5rem;
   background-color: #000;
   transform: rotate(25deg);
 }
