@@ -78,10 +78,17 @@ header {
                             flex-direction: column;
                             font-weight: bold;
 
-                            // span:hover {
-                            //     transform: 
-                            // }
+                            span:hover a {
+                                color: #000;
+                            }
                         }
+                    }
+                }
+
+                &.sns {
+
+                    a {
+                        font-weight: bold;
                     }
                 }
 
@@ -105,7 +112,7 @@ header {
 
         .title_wrap {
             text-align: right;
-            transform: rotate3d(0, 1, 0, -45deg) translateZ(0) scale(1);
+            transform: rotate3d(0, 1, 0, -40deg) translateZ(0) scale(1);
             transform-origin: right center;
             transform-style: preserve-3d;
             will-change: transform;
@@ -116,7 +123,7 @@ header {
             }
 
             &:hover {
-                transform: rotate3d(0, 1, 0, -35deg) translateZ(0) scale(1);
+                transform: rotate3d(0, 1, 0, -30deg) translateZ(0) scale(1);
             }
 
             &:hover .title a {

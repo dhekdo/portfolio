@@ -67,6 +67,12 @@ header .header_wrap nav ul.info li:not(:first-child) {
   flex-direction: column;
   font-weight: bold;
 }
+header .header_wrap nav ul.info li:not(:first-child) span:hover a {
+  color: #000;
+}
+header .header_wrap nav ul.sns a {
+  font-weight: bold;
+}
 header .header_wrap nav ul li {
   font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
@@ -83,7 +89,7 @@ header .header_wrap nav ul li {
 }
 .main .main_link .title_wrap {
   text-align: right;
-  transform: rotate3d(0, 1, 0, -45deg) translateZ(0) scale(1);
+  transform: rotate3d(0, 1, 0, -40deg) translateZ(0) scale(1);
   transform-origin: right center;
   transform-style: preserve-3d;
   will-change: transform;
@@ -93,7 +99,7 @@ header .header_wrap nav ul li {
   margin-top: -100px;
 }
 .main .main_link .title_wrap:hover {
-  transform: rotate3d(0, 1, 0, -35deg) translateZ(0) scale(1);
+  transform: rotate3d(0, 1, 0, -30deg) translateZ(0) scale(1);
 }
 .main .main_link .title_wrap:hover .title a {
   -webkit-text-stroke: 3px #000;
