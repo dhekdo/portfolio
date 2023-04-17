@@ -1,10 +1,4 @@
-@import url(https://db.onlinewebfonts.com/c/2f8845bdde42e943355a39765c5be5c0?family=Druk+Wide+Web+Super);
-@import url(https://db.onlinewebfonts.com/c/29800a9e7d146302b8ed9ad2f848db63?family=Druk+Wide+Web+Bold);
-
-@font-face {font-family: "Druk Wide Web Bold"; src: url("https://db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.eot"); src: url("https://db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.woff") format("woff"), url("https://db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/29800a9e7d146302b8ed9ad2f848db63.svg#Druk Wide Web Bold") format("svg"); }
-
-@font-face {font-family: "Druk Wide Web Super"; src: url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot"); src: url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.woff") format("woff"), url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.svg#Druk Wide Web Super") format("svg"); }
-
+$mainFont : 'Black Han Sans', sans-serif;
 $smallFont : 'Noto Sans KR', sans-serif;
 
 * {
@@ -18,7 +12,7 @@ li, ul, ol {
 
 body {
     background-color: #4801ff;
-    font-family: "Druk Wide Web Bold";
+    font-family: $mainFont;
     font-size: 20px;
     color: #fff;
 }
@@ -43,12 +37,12 @@ header {
             width: 15%;
 
             .logo_text {
-                font-size: 2.8rem;
+                font-size: 3rem;
                 display: flex;
                 flex-direction: column;
     
                 span:last-child {
-                    margin-top: -5px;
+                    margin-top: -15px;
                 }
     
                 &:hover {
@@ -61,7 +55,7 @@ header {
 
         nav {
             width: 100%;
-            margin-top: 60px;
+            margin-top: 50px;
             display: flex;
             justify-content: space-between;
 
@@ -74,11 +68,19 @@ header {
                     li {
 
                         margin-right: 80px;
+
+                        &:first-child {
+                            cursor: default;
+                        }
     
                         &:not(:first-child) {
                             display: flex;
                             flex-direction: column;
                             font-weight: bold;
+
+                            // span:hover {
+                            //     transform: 
+                            // }
                         }
                     }
                 }
@@ -127,9 +129,9 @@ header {
 
                 a {
                     color: #000;
-                    font-size: 12rem;
+                    font-size: 17rem;
                     text-transform: uppercase;
-                    font-family: "Druk Wide Web Super";
+                    font-family: $mainFont;
                     position: relative;
 
                     span {
@@ -137,7 +139,7 @@ header {
                         &::before {
                                 content: attr(data-info);
                                 position: absolute;
-                                top: -0.5rem;
+                                top: 0;
                                 left: -13rem;
                                 font-size: 1.4rem;
                                 font-weight: bold;
@@ -164,7 +166,7 @@ header {
                             content: "";
                             display: inline-block;
                             width: 2px;
-                            height: 10rem;
+                            height: 11rem;
                             background-color: #000;
                             transform: rotate(25deg);
                         }
