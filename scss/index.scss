@@ -117,15 +117,61 @@ header {
                 -webkit-text-stroke: 3px #000;
                 color: #4801ff;
             }
+
+            &:hover .title span {
+                -webkit-text-stroke: 0px #000;
+                color: #000;           
+            }
             
             .title{
-                
+
                 a {
                     color: #000;
                     font-size: 12rem;
                     text-transform: uppercase;
                     font-family: "Druk Wide Web Super";
+                    position: relative;
+
+                    span {
+
+                        &::before {
+                                content: attr(data-info);
+                                position: absolute;
+                                top: -0.5rem;
+                                left: -13rem;
+                                font-size: 1.4rem;
+                                font-weight: bold;
+                                font-family: $smallFont;
+                        }
+
+                        &.info_text::before {
+                                left: -11rem;
+                        }
+
+                        &.info_text2::before {
+                                left: -7rem;                          
+                        }
+
+                        &.info_text3::before {
+                                left: -11.5rem;
+                        }
+                        
+                        &.info_text4::before {
+                                left: -12.5rem;
+                        }
+                        
+                        &::after {
+                            content: "";
+                            display: inline-block;
+                            width: 2px;
+                            height: 10rem;
+                            background-color: #000;
+                            transform: rotate(25deg);
+                        }
+                    }
+
                 }
+
             }
         }
     }
