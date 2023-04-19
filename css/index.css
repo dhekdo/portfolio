@@ -208,24 +208,35 @@ header .header_wrap nav ul li {
   position: relative;
   transition: all 0.3s;
   color: #000;
+  z-index: 9999;
 }
-.content .content_wrap .slide_box {
+
+.slide_wrap {
+  width: 100%;
   position: relative;
+  top: 0;
+  left: 0;
+}
+.slide_wrap .slide_box {
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
+  height: 500px;
+  display: none;
 }
-.content .content_wrap .slide_box img {
+.slide_wrap .slide_box img {
   width: 100%;
+  height: 100%;
 }
-.content .content_wrap .slide_box span {
+.slide_wrap .slide_box span {
   text-transform: uppercase;
   position: absolute;
   top: -20%;
   right: 8%;
-  font-size: 13rem;
+  font-size: 12rem;
   color: rgba(255, 255, 255, 0);
-  -webkit-text-stroke: 2.5px #000;
+  -webkit-text-stroke: 2px #000;
 }
 
 .profile {

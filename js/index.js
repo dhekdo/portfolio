@@ -15,14 +15,18 @@ window.onload = function(){
     });
 
     // 컨텐츠 링크 클릭시 노출
-    $(".title>a").click(function(){
+    $(".main_link>li").click(function(){
+        var titleIndex = $(this).index();
         $(".logo .logo_text").css({animation: "slideUp 0.8s ease-in-out forwards", color:"#000"});
         $("nav a, nav li").css({color : "#000", transition: "all 1s"})
-        $(".content").fadeIn();
+        $(".content").fadeIn(function(){
+            $(".slide_wrap>div").eq(titleIndex).fadeIn();
+        });
     });
 
     // 뒤로가기 버튼 클릭
     $(".pre_btn").click(function(){
+        $(".slide_wrap>div").fadeOut();
         $(".content").fadeOut();
         $(".logo .logo_text").css({animation: "slideDown 0.8s ease-in-out forwards", color: ""});
         $("nav a, nav li").css({color : "", transition: "all 1s"})
