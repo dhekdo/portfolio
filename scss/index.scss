@@ -20,19 +20,24 @@ body {
     font-family: $mainFont;
     font-size: 20px;
     color: #fff;
-}
-body::-webkit-scrollbar {
-    width: 15px;  /* 스크롤바의 너비 */
-}
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 
-body::-webkit-scrollbar-thumb {
-    height: 30%;
-    background: #000;
-    border-radius: 3px;
-}
-
-body::-webkit-scrollbar-track {
-    background: #4801ff
+    &::-webkit-scrollbar {
+        width: 15px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        height: 30%;
+        background: #000;
+        border-radius: 3px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: #fff
+    }
 }
 
 a {
@@ -225,7 +230,57 @@ header {
                         }
                     }
                 }
+            }
+        }
+    }
+}
 
+
+.content {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+    .content_wrap {
+        width: 100%;
+        height: 100%;
+        background-color: #f2ecdc;
+
+        .pre_btn {
+            position: absolute;
+            top: 5%;
+            right: 3%;
+
+            i {
+                cursor: pointer;
+                font-size: 3rem;
+                position: relative;
+                transition: all 0.3s;
+                color: #000;
+            }
+        }
+
+        .slide_box {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+
+            span {
+                text-transform: uppercase;
+                position: absolute;
+                top: -20%;
+                right: 8%;
+                font-size: 13rem;
+                color: rgba(255,255, 255, 0);
+                -webkit-text-stroke: 2.5px #000;
             }
         }
     }
@@ -247,16 +302,17 @@ header {
     }
 
     .profile_wrap {
-        width: 95%;
+        width: 100%;
         height: 100%;
+        padding: 5%;
         position: fixed;
         top: 0;
         left: 0;
 
-        .exit {
+        .exit_btn {
             position: absolute;
             top: 5%;
-            right: 0;
+            right: 3%;
 
             span {
                 cursor: pointer;
@@ -297,6 +353,7 @@ header {
             padding: 10%;
             margin: 0 auto;
             display: flex;
+            // justify-content: center;
             align-items: center;
 
             .profile_imgbox {
