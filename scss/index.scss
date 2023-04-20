@@ -83,6 +83,7 @@ header {
                 flex-direction: column;
                 position: fixed;
                 top: 70%;
+                color: #fff;
                 
                 span:last-child {
                     margin-top: -15px;
@@ -247,6 +248,7 @@ header {
     .content_wrap {
         width: 100%;
         height: 100%;
+        background-color: #000;
 
         .pre_btn {
             position: absolute;
@@ -259,6 +261,7 @@ header {
                 position: relative;
                 transition: all 0.3s;
                 z-index: 9999;
+                color: #fff;
             }
         }
     }
@@ -276,17 +279,13 @@ header {
         transform: translateY(-50%);
         width: 100%;
         height: 600px;
-        opacity: 0.9;
         display: none;
-
-        &:hover {
-            opacity: 1;
-        }
         
         &.slide_mini6 {
 
             span {
                 top: -25%;
+
                 &:last-child {
                     top: -5%;
                 }
@@ -305,6 +304,7 @@ header {
             right: 8%;
             font-size: 11rem;
             color: rgba(255,255, 255, 0);
+            -webkit-text-stroke: 2px #fff;
         }
     }
 }

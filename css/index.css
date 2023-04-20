@@ -72,6 +72,7 @@ header .header_wrap .logo a.logo_text {
   flex-direction: column;
   position: fixed;
   top: 70%;
+  color: #fff;
 }
 header .header_wrap .logo a.logo_text span:last-child {
   margin-top: -15px;
@@ -195,6 +196,7 @@ header .header_wrap nav ul li {
 .content .content_wrap {
   width: 100%;
   height: 100%;
+  background-color: #000;
 }
 .content .content_wrap .pre_btn {
   position: absolute;
@@ -207,6 +209,7 @@ header .header_wrap nav ul li {
   position: relative;
   transition: all 0.3s;
   z-index: 9999;
+  color: #fff;
 }
 
 .slide_wrap {
@@ -221,11 +224,7 @@ header .header_wrap nav ul li {
   transform: translateY(-50%);
   width: 100%;
   height: 600px;
-  opacity: 0.9;
   display: none;
-}
-.slide_wrap .slide_box:hover {
-  opacity: 1;
 }
 .slide_wrap .slide_box.slide_mini6 span {
   top: -25%;
@@ -244,6 +243,7 @@ header .header_wrap nav ul li {
   right: 8%;
   font-size: 11rem;
   color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 2px #fff;
 }
 
 .profile {
