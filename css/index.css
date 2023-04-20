@@ -226,6 +226,10 @@ header .header_wrap nav ul li {
   height: 600px;
   display: none;
 }
+.slide_wrap .slide_box:hover {
+  opacity: 0.8;
+  transition: all 0.5s;
+}
 .slide_wrap .slide_box.slide_mini6 span {
   top: -25%;
 }

@@ -281,6 +281,12 @@ header {
         height: 600px;
         display: none;
         
+
+        &:hover {
+            opacity: 0.8;
+            transition: all 0.5s;
+        }
+        
         &.slide_mini6 {
 
             span {
