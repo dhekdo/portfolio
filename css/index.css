@@ -31,6 +31,10 @@ body::-webkit-scrollbar-track {
   background: #fff;
 }
 
+.scroll_off::-webkit-scrollbar {
+  display: none;
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -200,16 +204,23 @@ header .header_wrap nav ul li {
 }
 .content .content_wrap .pre_btn {
   position: absolute;
-  top: 5%;
+  top: 2.9%;
   right: 3%;
 }
-.content .content_wrap .pre_btn i {
+.content .content_wrap .pre_btn span {
+  display: inline-block;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 5rem;
+  font-weight: bold;
   position: relative;
-  transition: all 0.3s;
   z-index: 9999;
   color: #fff;
+  transform: rotate(180deg);
+}
+.content .content_wrap .pre_btn span:hover {
+  color: #000;
+  -webkit-text-stroke: 0.5px #fff;
+  transition: all 0.3s;
 }
 
 .slide_wrap {
@@ -226,9 +237,8 @@ header .header_wrap nav ul li {
   height: 600px;
   display: none;
 }
-.slide_wrap .slide_box:hover {
+.slide_wrap .slide_box:hover img {
   opacity: 0.8;
-  transition: all 0.5s;
 }
 .slide_wrap .slide_box.slide_mini6 span {
   top: -25%;
@@ -239,6 +249,7 @@ header .header_wrap nav ul li {
 .slide_wrap .slide_box img {
   width: 100%;
   height: 100%;
+  transition: all 0.5s;
 }
 .slide_wrap .slide_box span {
   text-transform: uppercase;
