@@ -432,15 +432,37 @@ header {
             padding: 10%;
             margin: 0 auto;
             display: flex;
-            // justify-content: center;
+            justify-content: space-around;
             align-items: center;
 
-            // .profile_imgbox {
+            .profile_text {
+                ul {
+                    font-size: 2.5rem;
 
-            //     img {
-                    
-            //     }
-            // }
+                    &:not(:last-child) {
+                        margin-bottom: 50px;
+                    }
+
+                    &:last-child {
+                        li {
+                            &:last-child {
+                                &:hover {
+                                    color: #f9e000;
+                                }
+                            }
+                        }
+                    }
+
+                    li {
+
+                        &:first-child {
+                            font-size: 3rem;
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                }
+            }
         }
     }
 }
