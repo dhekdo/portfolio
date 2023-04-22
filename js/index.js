@@ -1,14 +1,23 @@
 window.onload = function(){
-    // 프로필 버튼 클릭시 노출
+    // 링크 버튼 클릭시 노출
     $(".profile_link").click(function(){
+        $("nav").fadeOut();
         $("body").addClass("scroll_off");
         $(".profile").fadeIn(1000);
         $(".logo .logo_text").css({animation: "slideUp 0.8s ease-in-out forwards", display: "inline-block"});
     });
+
+    $(".skill_link").click(function(){
+        $("nav").fadeOut();
+        $("body").addClass("scroll_off");
+        $(".skill").fadeIn(1000);
+        $(".logo .logo_text").css({animation: "slideUp 0.8s ease-in-out forwards", display: "inline-block"});
+    });
     // 닫기 버튼 클릭
     $(".exit_btn").click(function(){
+        $("nav").fadeIn();
         $("body").removeClass("scroll_off");
-        $(".profile").fadeOut();
+        $(".profile, .skill").fadeOut();
         $(".logo .logo_text").css({animation: "slideDown 0.8s ease-in-out forwards", display : ""});
     }).mouseover(function(){
         $(".exit_btn span").css({"-webkit-text-stroke" : "1px #fff", color:"#4801ff"});
