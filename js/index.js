@@ -29,6 +29,7 @@ window.onload = function(){
     $(".main_link>li").click(function(){
         var titleIndex = $(this).index();
 
+        $(this).css({transform : "translate(0,0)"});
         $("body").addClass("scroll_off");
         $(".logo .logo_text").css({animation: "slideUp 0.8s ease-in-out forwards"}).mouseover(function(){
             $(".logo .logo_text").css({color:"#000"});
@@ -37,7 +38,7 @@ window.onload = function(){
         });
         $("nav a, nav li").css({color : "#fff"});
         $(".info li:last-child").fadeOut();
-        $(".content").fadeIn(function(){
+        $(".content").fadeIn(600,function(){
             $(".slide_wrap>div").eq(titleIndex).fadeIn();
         });
     });
@@ -45,6 +46,7 @@ window.onload = function(){
     // 뒤로가기 버튼 클릭
     $(".pre_btn").click(function(){
         $("body").removeClass("scroll_off");
+        $(".main_link>li").css({transform : ""});
         $(".slide_wrap>div").fadeOut();
         $(".info li:last-child").fadeIn();
         $(".content").fadeOut();
