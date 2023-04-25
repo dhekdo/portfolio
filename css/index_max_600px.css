@@ -125,8 +125,9 @@
     width: 100%;
   }
   .main .main_link {
+    width: 95%;
     margin-top: 10px;
-    margin-right: 50px;
+    margin-right: 0px;
     perspective: 2000px;
   }
   .main .main_link .title_wrap {
@@ -153,13 +154,12 @@
   }
   .main .main_link .title_wrap .title a {
     color: #000;
-    font-size: 6rem;
+    font-size: 5.4rem;
     text-transform: uppercase;
     font-family: "Black Han Sans", sans-serif;
     position: relative;
-    line-height: 2;
+    line-height: 2.25;
     white-space: nowrap;
-    margin-right: 20px;
   }
   .main .main_link .title_wrap .title a p {
     margin-top: -100px;
