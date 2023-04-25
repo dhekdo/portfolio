@@ -105,6 +105,10 @@ header {
             }
         }
 
+        >p {
+            display: none;
+        }
+
         nav {
             width: 100%;
             margin-top: 50px;
@@ -401,7 +405,7 @@ header {
 
         .exit_btn {
             position: absolute;
-            top: 5%;
+            top: 5.35%;
             right: 3%;
 
             span {
@@ -542,7 +546,7 @@ header {
 
         .exit_btn {
             position: absolute;
-            top: 5%;
+            top: 5.35%;
             right: 3%;
 
             span {

@@ -86,6 +86,9 @@ header .header_wrap .logo a.logo_text:hover {
   -webkit-text-stroke: 1.5px #fff;
   transition: all 0.4s;
 }
+header .header_wrap > p {
+  display: none;
+}
 header .header_wrap nav {
   width: 100%;
   margin-top: 50px;
@@ -322,7 +325,7 @@ header .header_wrap nav ul li {
 }
 .profile .profile_wrap .exit_btn {
   position: absolute;
-  top: 5%;
+  top: 5.35%;
   right: 3%;
 }
 .profile .profile_wrap .exit_btn span {
@@ -437,7 +440,7 @@ header .header_wrap nav ul li {
 }
 .skill .skill_wrap .exit_btn {
   position: absolute;
-  top: 5%;
+  top: 5.35%;
   right: 3%;
 }
 .skill .skill_wrap .exit_btn span {
