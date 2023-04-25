@@ -71,7 +71,7 @@ header .header_wrap .logo {
   width: 20%;
 }
 header .header_wrap .logo a.logo_text {
-  font-size: 3.5rem;
+  font-size: 4.2rem;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -118,7 +118,7 @@ header .header_wrap nav ul.sns a {
   font-weight: bold;
 }
 header .header_wrap nav ul li {
-  font-size: 14px;
+  font-size: 1.2rem;
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.8;
   white-space: nowrap;
