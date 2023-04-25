@@ -173,8 +173,8 @@
 
         .main_link {
             margin-top: 10px;
-            margin-right: 10px;
-            perspective: 2500px;
+            margin-right: 50px;
+            perspective: 2000px;
 
             .title_wrap {
                 text-align: right;
@@ -212,6 +212,7 @@
                         position: relative;
                         line-height: 2;
                         white-space:nowrap;
+                        margin-right: 20px;
 
                         p {
                             margin-top: -100px;
@@ -408,7 +409,7 @@
 
             .exit_btn {
                 position: absolute;
-                top: 5.4%;
+                top: 5.5%;
                 right: 3%;
 
                 span {
@@ -456,7 +457,7 @@
                 align-items: center;
 
                 .profile_imgbox {
-                    margin-top: 100px;
+                    margin-top: 120px;
                     text-align: center;
 
                     img {
@@ -569,7 +570,7 @@
 
             .exit_btn {
                 position: absolute;
-                top: 5.4%;
+                top: 5.5%;
                 right: 3%;
 
                 span {

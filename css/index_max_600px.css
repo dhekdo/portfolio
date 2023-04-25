@@ -126,8 +126,8 @@
   }
   .main .main_link {
     margin-top: 10px;
-    margin-right: 10px;
-    perspective: 2500px;
+    margin-right: 50px;
+    perspective: 2000px;
   }
   .main .main_link .title_wrap {
     text-align: right;
@@ -159,6 +159,7 @@
     position: relative;
     line-height: 2;
     white-space: nowrap;
+    margin-right: 20px;
   }
   .main .main_link .title_wrap .title a p {
     margin-top: -100px;
@@ -319,7 +320,7 @@
   }
   .profile .profile_wrap .exit_btn {
     position: absolute;
-    top: 5.4%;
+    top: 5.5%;
     right: 3%;
   }
   .profile .profile_wrap .exit_btn span {
@@ -362,7 +363,7 @@
     align-items: center;
   }
   .profile .profile_wrap .profile_content .profile_imgbox {
-    margin-top: 100px;
+    margin-top: 120px;
     text-align: center;
   }
   .profile .profile_wrap .profile_content .profile_imgbox img {
@@ -441,7 +442,7 @@
   }
   .skill .skill_wrap .exit_btn {
     position: absolute;
-    top: 5.4%;
+    top: 5.5%;
     right: 3%;
   }
   .skill .skill_wrap .exit_btn span {
