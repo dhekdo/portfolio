@@ -369,7 +369,10 @@ header .header_wrap nav ul li {
 .profile .profile_wrap .profile_content .profile_text ul:not(:last-child) {
   margin-bottom: 50px;
 }
-.profile .profile_wrap .profile_content .profile_text ul:last-child li:last-child:hover {
+.profile .profile_wrap .profile_content .profile_text ul:last-child li:hover a {
+  color: #000;
+}
+.profile .profile_wrap .profile_content .profile_text ul:last-child li:last-child:hover a {
   color: #f9e000;
 }
 .profile .profile_wrap .profile_content .profile_text ul li:first-child {
@@ -493,13 +496,141 @@ header .header_wrap nav ul li {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 .skill .skill_wrap .skill_content > div ul li {
   cursor: pointer;
 }
-.skill .skill_wrap .skill_content > div ul li:hover {
-  animation: shake 0.9s infinite;
+.skill .skill_wrap .skill_content > div ul li div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.skill .skill_wrap .skill_content > div ul li div span {
+  opacity: 0.3;
+  transition: all 1s;
+}
+@keyframes per_95 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes per_90 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes per_85 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 85%;
+  }
+}
+@keyframes per_80 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes per_75 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes per_70 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+.skill .skill_wrap .skill_content > div ul li div span.bar {
+  display: inline-block;
+  width: 100%;
+  height: 7px;
+  position: relative;
+}
+.skill .skill_wrap .skill_content > div ul li div span.bar::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.skill .skill_wrap .skill_content > div ul li div span.bar::after {
+  content: "";
+  display: inline-block;
+  width: 95%;
+  height: 100%;
+  background-color: gold;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.skill .skill_wrap .skill_content > div ul li div span.js_bar::after, .skill .skill_wrap .skill_content > div ul li div span.git_bar::after, .skill .skill_wrap .skill_content > div ul li div span.figma_bar::after {
+  width: 85%;
+}
+.skill .skill_wrap .skill_content > div ul li div span.jq_bar::after, .skill .skill_wrap .skill_content > div ul li div span.json_bar::after, .skill .skill_wrap .skill_content > div ul li div span.ajax_bar::after {
+  width: 90%;
+}
+.skill .skill_wrap .skill_content > div ul li div span.vue_bar::after, .skill .skill_wrap .skill_content > div ul li div span.sql_bar::after {
+  width: 75%;
+}
+.skill .skill_wrap .skill_content > div ul li div span.react_bar::after {
+  width: 70%;
+}
+.skill .skill_wrap .skill_content > div ul li div span.ph_bar::after, .skill .skill_wrap .skill_content > div ul li div span.il_bar::after {
+  width: 80%;
+}
+.skill .skill_wrap .skill_content > div ul li div span.per {
+  display: inline-block;
+  width: 100%;
+  color: #000;
+  font-weight: 0.7rem;
+  text-align: center;
+}
+.skill .skill_wrap .skill_content > div ul li:hover img {
+  animation: shake 1.3s infinite;
+}
+.skill .skill_wrap .skill_content > div ul li:hover span {
+  opacity: 1;
+}
+.skill .skill_wrap .skill_content > div ul li:hover .bar::after {
+  animation: per_95 2s forwards;
+}
+.skill .skill_wrap .skill_content > div ul li:hover .jq_bar::after, .skill .skill_wrap .skill_content > div ul li:hover .json_bar::after, .skill .skill_wrap .skill_content > div ul li:hover .ajax_bar::after {
+  animation: per_90 2s forwards;
+}
+.skill .skill_wrap .skill_content > div ul li:hover .js_bar::after, .skill .skill_wrap .skill_content > div ul li:hover .git_bar::after, .skill .skill_wrap .skill_content > div ul li:hover .figma_bar::after {
+  animation: per_85 2s forwards;
+}
+.skill .skill_wrap .skill_content > div ul li:hover .ph_bar::after, .skill .skill_wrap .skill_content > div ul li:hover .il_bar::after {
+  animation: per_80 2s forwards;
+}
+.skill .skill_wrap .skill_content > div ul li:hover .vue_bar::after, .skill .skill_wrap .skill_content > div ul li:hover .sql_bar::after {
+  animation: per_75 2s forwards;
+}
+.skill .skill_wrap .skill_content > div ul li:hover .react_bar::after {
+  animation: per_70 2s forwards;
 }
 .skill .skill_wrap .skill_content > div ul li img {
   width: 90px;

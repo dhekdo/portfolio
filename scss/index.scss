@@ -453,12 +453,16 @@ header {
 
                     &:not(:last-child) {
                         margin-bottom: 50px;
+
                     }
 
                     &:last-child {
                         li {
+                            &:hover a {
+                                color: #000;
+                            }
                             &:last-child {
-                                &:hover {
+                                &:hover a  {
                                     color: #f9e000;
                                 }
                             }
@@ -604,19 +608,192 @@ header {
                     display: flex;
                     justify-content: space-around;
                     width: 100%;
-                    margin: 20px auto;
+                    margin: 50px auto;
 
                     li {
                         cursor: pointer;
 
-                        &:hover {
-                            animation: shake 0.9s infinite;
+                        div {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            span {
+                                opacity: 0.3;
+                                transition: all 1s;
+
+                                @keyframes per_95 {
+                                    0% {
+                                        width: 0;
+                                    }
+                                    100% {
+                                        width: 95%;
+                                    }
+                                }
+
+                                
+                                @keyframes per_90 {
+                                    0% {
+                                        width: 0;
+                                    }
+                                    100% {
+                                        width: 90%;
+                                    }
+                                }
+
+                                @keyframes per_85 {
+                                    0% {
+                                        width: 0;
+                                    }
+                                    100% {
+                                        width: 85%;
+                                    }
+                                }
+
+                                @keyframes per_80 {
+                                    0% {
+                                        width: 0;
+                                    }
+                                    100% {
+                                        width: 80%;
+                                    }
+                                }
+
+                                @keyframes per_75 {
+                                    0% {
+                                        width: 0;
+                                    }
+                                    100% {
+                                        width: 75%;
+                                    }
+                                }
+
+                                @keyframes per_70 {
+                                    0% {
+                                        width: 0;
+                                    }
+                                    100% {
+                                        width: 70%;
+                                    }
+                                }
+
+                                &.bar {
+                                    display: inline-block;
+                                    width: 100%;
+                                    height: 7px;
+                                    position: relative;
+
+                                    &::before {
+                                        content: "";
+                                        display: inline-block;
+                                        width: 100%;
+                                        height: 100%;
+                                        background-color: lightgrey;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                    }
+
+                                    &::after {
+                                        content: "";
+                                        display: inline-block;
+                                        width: 95%;
+                                        height: 100%;
+                                        background-color: gold;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        
+                                    }
+                                }
+
+                                &.js_bar, &.git_bar, &.figma_bar {
+                            
+                                    &::after {
+                                        width: 85%;
+                                    }
+                                }
+
+                                &.jq_bar, &.json_bar, &.ajax_bar {
+                            
+                                    &::after {
+                                        width: 90%;
+                                    }
+                                }
+
+                                &.vue_bar, &.sql_bar {
+                            
+                                    &::after {
+                                        width: 75%;
+                                    }
+                                }
+
+                                &.react_bar {
+                            
+                                    &::after {
+                                        width: 70%;
+                                    }
+                                }
+
+                                &.ph_bar, &.il_bar {
+
+                                    &::after {
+                                        width: 80%;
+                                    }
+                                }
+
+                                &.per {
+                                    display: inline-block;
+                                    width: 100%;
+                                    color: #000;
+                                    font-weight: 0.7rem;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        &:hover img {
+                            animation: shake 1.3s infinite;
+                        }
+
+                        &:hover span {
+                            opacity: 1;
+                        }
+
+                        &:hover .bar::after {
+                            animation: per_95 2s forwards;
+                        }
+
+                        &:hover .jq_bar::after,
+                        &:hover .json_bar::after,
+                        &:hover .ajax_bar::after {
+                            animation: per_90 2s forwards;
+                        }
+
+                        &:hover .js_bar::after,
+                        &:hover .git_bar::after,
+                        &:hover .figma_bar::after {
+                            animation: per_85 2s forwards;
                         }
                         
-                    
+                        &:hover .ph_bar::after,
+                        &:hover .il_bar::after {
+                            animation: per_80 2s forwards;
+                        }
+
+                        &:hover .vue_bar::after,
+                        &:hover .sql_bar::after {
+                            animation: per_75 2s forwards;
+                        }
+
+                        &:hover .react_bar::after {
+                            animation: per_70 2s forwards;
+                        }
+                        
                         img {
                             width: 90px;
-
                         }
                     }
                 }
