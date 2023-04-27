@@ -449,22 +449,17 @@ header {
             .profile_text {
                 
                 ul {
-                    font-size: 2.5rem;
+                    font-size: 2rem;
 
                     &:not(:last-child) {
-                        margin-bottom: 50px;
+                        margin-bottom: 30px;
 
                     }
 
                     &:last-child {
                         li {
                             &:hover a {
-                                color: #000;
-                            }
-                            &:last-child {
-                                &:hover a  {
-                                    color: #f9e000;
-                                }
+                                color: #f9e000;
                             }
                         }
                     }
@@ -472,7 +467,7 @@ header {
                     li {
 
                         &:first-child {
-                            font-size: 3rem;
+                            font-size: 2.5rem;
                             margin-bottom: 10px;
                             border-bottom: 3px solid #fff;
                         }

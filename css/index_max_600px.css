@@ -371,16 +371,16 @@
     width: 60%;
   }
   .profile .profile_wrap .profile_content .profile_text ul {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
   .profile .profile_wrap .profile_content .profile_text ul:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .profile .profile_wrap .profile_content .profile_text ul:last-child li:last-child:hover {
     color: #f9e000;
   }
   .profile .profile_wrap .profile_content .profile_text ul li:first-child {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-bottom: 5px;
     border-bottom: 3px solid #fff;
   }
