@@ -1,13 +1,9 @@
-
-
 window.onload = function(){
-
-    
 
     // 링크 버튼 클릭시 노출
     $(".profile_link").click(function(){
 
-        $('.profile').on('scroll touchmove mousewheel', function(event) {
+        $(".profile_wrap").on('scroll touchmove mousewheel', function(event) {
             event.preventDefault();
             event.stopPropagation();
             return false;

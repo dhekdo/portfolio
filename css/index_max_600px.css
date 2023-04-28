@@ -364,15 +364,18 @@
     align-items: center;
   }
   .profile .profile_wrap .profile_content .profile_imgbox {
-    width: 60%;
+    width: 50%;
     margin-top: 50px;
     text-align: center;
   }
   .profile .profile_wrap .profile_content .profile_imgbox img {
     width: 100%;
   }
+  .profile .profile_wrap .profile_content .profile_text {
+    margin-bottom: 100px;
+  }
   .profile .profile_wrap .profile_content .profile_text ul {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .profile .profile_wrap .profile_content .profile_text ul:not(:last-child) {
     margin-bottom: 20px;
