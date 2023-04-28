@@ -364,14 +364,15 @@
     align-items: center;
   }
   .profile .profile_wrap .profile_content .profile_imgbox {
-    margin-top: 170px;
+    width: 60%;
+    margin-top: 50px;
     text-align: center;
   }
   .profile .profile_wrap .profile_content .profile_imgbox img {
-    width: 60%;
+    width: 100%;
   }
   .profile .profile_wrap .profile_content .profile_text ul {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .profile .profile_wrap .profile_content .profile_text ul:not(:last-child) {
     margin-bottom: 20px;
@@ -380,7 +381,7 @@
     color: #f9e000;
   }
   .profile .profile_wrap .profile_content .profile_text ul li:first-child {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 5px;
     border-bottom: 3px solid #fff;
   }
