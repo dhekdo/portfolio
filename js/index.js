@@ -1,7 +1,18 @@
+
+
 window.onload = function(){
+
+    
 
     // 링크 버튼 클릭시 노출
     $(".profile_link").click(function(){
+
+        $('.profile').on('scroll touchmove mousewheel', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            return false;
+          });
+
         $("nav").fadeOut();
         $("body").addClass("scroll_off");
         $(".profile").fadeIn(1000);
@@ -13,6 +24,12 @@ window.onload = function(){
     });
 
     $(".skill_link").click(function(){
+
+        $('.skill').on('scroll touchmove mousewheel', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            return false;
+          });
         $("nav").fadeOut();
         $("body").addClass("scroll_off");
         $(".skill").fadeIn(1000);
@@ -37,6 +54,9 @@ window.onload = function(){
     }).mouseout(function(){
         $(".exit_btn span").css({color : ""});
     });
+
+    // 스크롤 금지
+    
 
     // 컨텐츠 링크 클릭시 노출
     $(".main_link>li").click(function(){
