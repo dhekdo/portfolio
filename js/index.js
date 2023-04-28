@@ -1,10 +1,15 @@
 window.onload = function(){
+
     // 링크 버튼 클릭시 노출
     $(".profile_link").click(function(){
         $("nav").fadeOut();
         $("body").addClass("scroll_off");
         $(".profile").fadeIn(1000);
         $(".logo .logo_text").css({animation: "slideUp 0.8s ease-in-out forwards", display: "inline-block"});
+
+        if (matchMedia("screen and (max-width: 600px)").matches) {
+            $(".logo .logo_text").css({animation: "",opacity:0, transition : "all 0.8s", display: ""});
+          }
     });
 
     $(".skill_link").click(function(){
@@ -12,6 +17,10 @@ window.onload = function(){
         $("body").addClass("scroll_off");
         $(".skill").fadeIn(1000);
         $(".logo .logo_text").css({animation: "slideUp 0.8s ease-in-out forwards", display: "inline-block"});
+        
+        if (matchMedia("screen and (max-width: 600px)").matches) {
+            $(".logo .logo_text").css({animation: "",opacity:0, transition : "all 0.8s", display: ""});
+          }
     });
     // 닫기 버튼 클릭
     $(".exit_btn").click(function(){
@@ -19,6 +28,10 @@ window.onload = function(){
         $("body").removeClass("scroll_off");
         $(".profile, .skill").fadeOut();
         $(".logo .logo_text").css({animation: "slideDown 0.8s ease-in-out forwards", display : ""});
+
+        if (matchMedia("screen and (max-width: 600px)").matches) {
+            $(".logo .logo_text").css({animation: "", opacity : 1, transition : "all 0.8s"});
+          }
     }).mouseover(function(){
         $(".exit_btn span").css({"-webkit-text-stroke" : "1px #fff", color:"#4801ff"});
     }).mouseout(function(){
