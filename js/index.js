@@ -1,5 +1,6 @@
 window.onload = function(){
 
+
     // 링크 버튼 클릭시 노출
     $(".profile_link").click(function(){
 
@@ -88,3 +89,5 @@ window.onload = function(){
     });
 
 }
+
+alert("포폴 참고용으로 들어오지마세요");
