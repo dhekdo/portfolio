@@ -8,7 +8,7 @@ window.onload = function(){
             event.preventDefault();
             event.stopPropagation();
             return false;
-          });
+        });
 
         $("nav").fadeOut();
         $("body").addClass("scroll_off");
@@ -89,5 +89,3 @@ window.onload = function(){
     });
 
 }
-
-alert("포폴 참고용으로 들어오지마세요");
