@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 카카오 썸네일 -->
     <meta property="og:url" content="https://dhekdo.github.io/portfolio">
@@ -14,315 +15,374 @@
     <!--  -->
     <title>오다애 PORTFOLIO</title>
     <!-- 폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
-    <!-- 폰트 끝 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- style -->
-    <link rel="stylesheet" href="./css/index.css">
-    <!-- style -->
+    <!--  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC2RL6BN5Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NC2RL6BN5Z');
+    </script>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index_1281px_1500px.css">
+    <link rel="stylesheet" href="css/index_901px_1280px.css">
+    <link rel="stylesheet" href="css/index_601px_900px.css">
+    <link rel="stylesheet" href="css/index_max_600px.css">
 </head>
 
 <body>
-    <div class="wrap">
-        <header>
-            <div class="logo_box home_bt">
-                <h1>oh!&nbsp;</h1>
-                <h1>da ae</h1>
-                <!-- <h1>logo</h1> -->
+    <header>
+        <div class="header_wrap">
+            <div class="logo">
+                <a href="index.html" class="logo_text">
+                    <span>OH!</span>
+                    <span>DA AE</span>
+                </a>
             </div>
-            <div class="info_box">
-                <div class="text_box">
-                    <span>Web Publisher</span>
-                </div>
-                <div class="info_link">
-                    <div class="left_info">
-                        <div>
+            <nav>
+                <ul class="info">
+                    <li>Web Publisher</li>
+                    <li>
+                        <span>
                             <a href="https://github.com/dhekdo?tab=repositories" target="_blank">
-                                <i class="fa-brands fa-github"></i>
-                                <span>Git Hub</span>
+                                <i class="fa-brands fa-github"></i> Git Hub
                             </a>
+                        </span>
+                        <span>
                             <a href="tel:+01051950924">
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                                <span>010-5195-0924</span>
+                                <i class="fa-solid fa-mobile-screen-button"></i> 010.5195.0924
                             </a>
-                        </div>
-                        <div class="popup_box">
-                            <a href="javascript:;" class="profile_bt">
-                                <i class="fa-solid fa-user-large"></i>
-                                <span>About Me</span>
-                            </a>
-                            <a href="javascript:;" class="skill_bt">
-                                <i class="fa-solid fa-medal"></i>
-                                <span>Technical Skill</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="right_info">
-                        <div>
-                            <a href="mailto:dhekdo.kakao.com" title="dhekdo@kakao.com">
-                                <i class="fa-solid fa-envelope" style="font-size : 15px;"></i>
-                                <span>Mail</span>
-                            </a>
-                            <a href="https://open.kakao.com/o/sZtodzgf" target="_blank">
-                                <i class="fa-solid fa-comments" style="font-size : 13px;"></i>
-                                <span>Kakao</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- 메인링크 -->
-        <div class="main">
-            <ul class="main_link">
-                <li>
-                    <div>
-                        <a href="javascript:;">
-                            <span data-info="Interactive web"></span>
-                            hosb
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <a href="javascript:;" class="profile_link">
+                                <i class="fa-solid fa-user-large"></i> About Me</a>
+                        </span>
+                        <span>
+                            <a href="javascript:;" class="skill_link">
+                                <i class="fa-solid fa-medal"></i> Technical Skill</a>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="sns">
+                    <li>
+                        <a href="mailto:dhekdo.kakao.com" title="dhekdo@kakao.com">
+                            <i class="fa-solid fa-envelope" style="font-size : 15px;"></i> mail
                         </a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="javascript:;">
-                            <span data-info="responsive web"></span>
-                            onstay
+                    </li>
+                    <li>
+                        <a href="https://open.kakao.com/o/sZtodzgf" target="_blank">
+                            <i class="fa-solid fa-comments" style="font-size : 13px;"></i> Kakao
                         </a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="javascript:;">
-                            <span></span>
-                            title
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="javascript:;">
-                            <span></span>
-                            title
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="javascript:;">
-                            <span></span>
-                            title
-                        </a>
-                    </div>
-                </li>
-                <!-- <li>
-                    <div>
-                        <a href="javascript:;">
-                            <span></span>
-                            title
-                        </a>
-                    </div>
-                </li> -->
-            </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <!-- 메인링크 끝 -->
+    </header>
 
-        <!-- 메인링크 포트폴리오 연결 -->
-        <div class="main_box">
-            <div class="bg"></div>
+    <!-- 메인 링크 -->
+    <div class="main">
+        <ul class="main_link">
+            <li class="title_wrap">
+                <div class="title">
+                    <a href="javascript:;">
+                        <span data-info="Interactive web"></span> hosb
+                    </a>
+                </div>
+            </li>
+            <!-- <li class="title_wrap">
+                <div class="title">
+                    <a href="javascript:;">
+                        <span data-info="react, redux" class="info_text"></span> kangol
+                    </a>
+                </div>
+            </li> -->
+            <li class="title_wrap">
+                <div class="title">
+                    <a href="javascript:;">
+                        <span data-info="api, ajax" class="info_text2"></span> millie
+                    </a>
+                </div>
+            </li>
+            <li class="title_wrap">
+                <div class="title">
+                    <a href="javascript:;">
+                        <span data-info="responsive web"></span> onstay
+                    </a>
+                </div>
+            </li>
+            <li class="title_wrap">
+                <div class="title">
+                    <a href="javascript:;">
+                        <span data-info="team project" class="info_text3"></span> goobne
+                    </a>
+                </div>
+            </li>
+            <li class="title_wrap">
+                <div class="title">
+                    <a href="javascript:">
+                        <span data-info="web Standards" class="info_text4"></span> honey<p>dream</p>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 포트폴리오 컨텐츠 박스 -->
+    <div class="content"> 
+        <div class="content_wrap">
             <div class="pre_btn">
                 <span>➔</span>
             </div>
-            <div class="port_wrap">
-                
-            </div>
         </div>
-        <!-- 메인링크 포트폴리오 연결 끝 -->
-
-        <!-- 인포링크 팝업 -->
-        <div class="info_link_popup">
-            <div class="bg"></div>
-            <div class="info_link_popup_wrap">
-                <!-- 닫기버튼 -->
-                <div class="exit_btn">
-                    <div class="container blue circleBehind">
-                        <span>X</span>
-                    </div>
-                </div>
-                <!-- 닫기버튼 끝 -->
-                <!-- 프로필 박스 -->
-                <div class="profile_content">
-                    
-                </div>
-                <!-- 프로필 박스 끝 -->
-                <!-- 스킬 박스 -->
-                <div class="skill_content">
-                    <h2>Technical Skill</h2>
-                    <div class="skill_wrap">
-                        <ul>
-                            <li>
-                                <img src="img/html.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar html_bar"></span>
-                                    <span class="per">95%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/css.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar css_bar"></span>
-                                    <span class="per">95%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/javascript.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar js_bar"></span>
-                                    <span class="per">85%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/jquery.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar jq_bar"></span>
-                                    <span class="per">95%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/sass.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar sass_bar"></span>
-                                    <span class="per">95%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/json.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar json_bar"></span>
-                                    <span class="per">80%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/ajax.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar ajax_bar"></span>
-                                    <span class="per">80%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/vue.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar vue_bar"></span>
-                                    <span class="per">75%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/react.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar react_bar"></span>
-                                    <span class="per">70%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/sql.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar sql_bar"></span>
-                                    <span class="per">75%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/github.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar git_bar"></span>
-                                    <span class="per">85%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/photoshop.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar ph_bar"></span>
-                                    <span class="per">80%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/illustrator.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar il_bar"></span>
-                                    <span class="per">80%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/figma.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar figma_bar"></span>
-                                    <span class="per">90%</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <!-- <ul>
-                            <li>
-                                <img src="img/vue.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar vue_bar"></span>
-                                    <span class="per">75%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/react.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar react_bar"></span>
-                                    <span class="per">70%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/sql.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar sql_bar"></span>
-                                    <span class="per">75%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/github.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar git_bar"></span>
-                                    <span class="per">85%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/photoshop.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar ph_bar"></span>
-                                    <span class="per">80%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/illustrator.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar il_bar"></span>
-                                    <span class="per">80%</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="img/figma.png" alt="스킬이미지">
-                                <div>
-                                    <span class="bar figma_bar"></span>
-                                    <span class="per">90%</span>
-                                </div>
-                            </li>
-                        </ul> -->
-                    </div> 
-                </div>
-                <!-- 스킬 박스 끝 -->
+    </div>
+    <div class="slide_wrap">
+        <div class="slide_box slide_mini1">
+            <img src="img/slide1.jpg" alt="슬라이드이미지">
+            <div class="btn_group">
+                <a href="https://dhekdo.github.io/project_3/" target="_blank">main</a>
+                <a href="https://drive.google.com/file/d/1M7YlTv_ZvQGnF5EcK9feUAoe24RtU-cZ/view?usp=sharing" target="_blank">document</a>
             </div>
+            <span>hosb</span>
         </div>
-        <!-- 인포링크 팝업 끝 -->
+        <!-- <div class="slide_box slide_mini2">
+            <img src="img/slide2.jpg" alt="슬라이드이미지">
+            <div class="btn_group">
+                <a href="https://dhekdo.github.io/project_5/" target="_blank">main</a>
+                <a href="https://drive.google.com/file/d/1R_pSRah6e-wrM7lSMh5rvJzFvJS0tbRv/view?usp=share_link"
+                    target="_blank">document</a>
+            </div>
+            <span>kangol</span>
+        </div> -->
+        <div class="slide_box slide_mini3">
+            <img src="img/sldie3.jpeg" alt="슬라이드이미지">
+            <div class="btn_group">
+                <a href="https://dhekdo.github.io/project_4/" target="_blank">main</a>
+                <a href="https://dhekdo.github.io/project_4/sub.html">sub</a>
+                <a href="https://drive.google.com/file/d/1UwZnNFZ45T0kcXEmQR0fGW5B0YkmZmoK/view?usp=sharing"
+                    target="_blank">document</a>
+            </div>
+            <span>millie</span>
+        </div>
+        <div class="slide_box slide_mini4">
+            <img src="img/slide4.jpg" alt="슬라이드이미지">
+            <div class="btn_group">
+                <a href="https://dhekdo.github.io/project_2/" target="_blank">main</a>
+                <a href="https://dhekdo.github.io/project_2/sub1.html" target="_blank">sub1</a>
+                <a href="https://dhekdo.github.io/project_2/sub4.html" target="_blank">sub2</a>
+                <a href="https://drive.google.com/file/d/1nRxOiAG1Ze8jM-L1cwRnhOtrC8hubIOg/view?usp=sharing"
+                    target="_blank">document</a>
+            </div>
+            <span>onstay</span>
+        </div>
+        <div class="slide_box slide_mini5">
+            <img src="img/slide5.png" alt="슬라이드이미지">
+            <div class="btn_group">
+                <a href="https://dhekdo.github.io/project_team/" target="_blank">main</a>
+                <a href="https://yangsungsu94.github.io/team_project/" target="_blank">sub1</a>
+                <a href="https://gayeonshin.github.io/teamproject/sub2.html" target="_blank">sub2</a>
+                <a href="https://gayeonshin.github.io/teamproject/basasak.html" target="_blank">sub3</a>
+                <a href="https://drive.google.com/file/d/1ivukKWleGEMrKgXFIQ7Zt2tmrE60y3fz/view?usp=sharing"
+                    target="_blank">document</a>
+            </div>
+            <span>goobne</span>
+        </div>
+        <div class="slide_box slide_mini6">
+            <img src="img/slide6.jpg" alt="슬라이드이미지">
+            <div class="btn_group">
+                <a href="https://dhekdo.github.io/project_1/" target="_blank">main</a>
+                <a href="https://dhekdo.github.io/project_1/sub1.html" target="_blank">sub1</a>
+                <a href="https://dhekdo.github.io/project_1/sub2.html" target="_blank">sub2</a>
+                <a href="https://drive.google.com/file/d/1OJMuwnV03gxF5huk-haNm-bOyB5I7C2y/view?usp=sharing"
+                    target="_blank">document</a>
+            </div>
+            <span>honey</span>
+            <span>dream</span>
+        </div>
     </div>
 
-    <script src="./js/index.js"></script>
+    <!-- 프로필 -->
+    <div class="profile">
+        <div class="profile_bg"></div>
+        <div class="profile_wrap">
+            <div class="exit_btn">
+                <div class="container blue circleBehind">
+                    <span>X</span>
+                </div>
+            </div>
+            <div class="profile_content">
+                <div class="profile_imgbox">
+                    <img src="img/profile.png" alt="프로필이미지">
+                </div>
+                <div class="profile_text">
+                    <ul>
+                        <li>PROFILE</li>
+                        <li>오다애</li>
+                        <li>1991 / 09 / 24</li>
+                        <li>경기도 안산 거주</li>
+                    </ul>
+                    <ul>
+                        <li>EDUCATION</li>
+                        <li>2012. 대림대학교 졸업</li>
+                        <li>2023. 웹표준기반 스마트 UI/UX 디자인 &<br>
+                        웹퍼블리셔 과정 수료</li>
+                    </ul>
+                    <ul>
+                        <li>CERTIFICATE</li>
+                        <li>운전면허자격증 2종보통</li>
+                        <li>웹디자인기능사</li>
+                    </ul>
+                    <ul>
+                        <li>CONTACT</li>
+                        <li>
+                            <a href="tel:+01051950924">
+                                010-5195-0924
+                            </a>
+                            </li>
+                        <li>
+                            <a href="mailto:dhekdo.kakao.com" title="dhekdo@kakao.com">
+                                dhekdo@kakao.com
+                            </a>   
+                        </li>
+                        <li>
+                            <a href="https://open.kakao.com/o/sZtodzgf" target="_blank">
+                                Kakao Chat
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 스킬 -->
+    <div class="skill">
+        <div class="skill_bg"></div>
+        <div class="skill_wrap">
+            <div class="exit_btn">
+                <div class="container blue circleBehind">
+                    <span>X</span>
+                </div>
+            </div>
+            <div class="skill_content">
+                <h2>TECHNICAL SKILL</h2>                
+                <div>
+                    <ul>
+                        <li>
+                            <img src="img/html.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar html_bar"></span>
+                                <span class="per">95%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/css.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar css_bar"></span>
+                                <span class="per">95%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/javascript.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar js_bar"></span>
+                                <span class="per">85%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/jquery.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar jq_bar"></span>
+                                <span class="per">95%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/sass.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar sass_bar"></span>
+                                <span class="per">95%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/json.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar json_bar"></span>
+                                <span class="per">80%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/ajax.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar ajax_bar"></span>
+                                <span class="per">80%</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <img src="img/vue.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar vue_bar"></span>
+                                <span class="per">75%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/react.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar react_bar"></span>
+                                <span class="per">70%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/sql.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar sql_bar"></span>
+                                <span class="per">75%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/github.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar git_bar"></span>
+                                <span class="per">85%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/photoshop.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar ph_bar"></span>
+                                <span class="per">80%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/illustrator.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar il_bar"></span>
+                                <span class="per">80%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/figma.png" alt="스킬이미지">
+                            <div>
+                                <span class="bar figma_bar"></span>
+                                <span class="per">90%</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
