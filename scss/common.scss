@@ -1,0 +1,85 @@
+// $mainColor : #4801ff;
+$mainColor : gray;
+$fontBl : #000;
+$fontWh : #fff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Black Han Sans', sans-serif;
+    color: $fontWh;
+    font-size: 20px;
+}
+
+html {
+    background-color: $mainColor;
+    width: 100%;
+    height: 100vh;
+
+    .scroll_off {
+
+        &::-webkit-scrollbar-thumb {
+            height: 30%;
+            background: $mainColor;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $mainColor;
+        }
+
+    }
+
+    .scroll_off_bl {
+
+        &::-webkit-scrollbar-thumb {
+            height: 30%;
+            background: $fontBl;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $fontBl;
+        }
+
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+
+        &::-webkit-scrollbar {
+            width: 17px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            height: 30%;
+            background: $fontBl;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: $fontWh;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $fontWh;
+    text-wrap: nowrap;
+}
+
+ul, li, ol {
+    list-style: none;
+}
+

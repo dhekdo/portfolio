@@ -1,186 +1,152 @@
-$mainFont : 'Black Han Sans',
-sans-serif;
-$smallFont : 'Noto Sans KR',
-sans-serif;
+@import "common";
 
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-li,
-ul,
-ol {
-    list-style: none;
-}
-
-body {
-    background-color: #4801ff;
-    font-family: $mainFont;
-    font-size: 20px;
-    color: #fff;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-
-    
-
-    &::-webkit-scrollbar {
-        width: 15px;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-        height: 30%;
-        background: #000;
-        border-radius: 3px;
-    }
-    
-    &::-webkit-scrollbar-track {
-        background: #fff
-    }
-}
-
-.scroll_off {
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-@keyframes slideUp {
+ // 로고 애니메이션
+ @keyframes slideUp {
     0% {
-        top: 70%;
+        top: calc(100% - 15rem);
     }
+
     100% {
-        top: 5%;
+        top: 2rem;
     }
 }
 
 @keyframes slideDown {
     0% {
-        top: 5%;
+        top: 2rem;
     }
+
     100% {
-        top: 70%;
+        top: calc(100% - 15rem);
     }
 }
 
 header {
-    width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 99;
+    padding: 2rem;
+    width: 100%;
+    z-index: 999;
 
-    .header_wrap {
-        width: 95%;
-        margin: 30px auto;
+    .logo_box {
+        margin-bottom: 2rem;
+        cursor: pointer;
+        display: inline-block;
+        position: fixed;
+        bottom: 5rem;
 
-        .logo {
-            width: 20%;
+        h1 {
+            text-transform: uppercase;
+            font-size: 4rem;
+            line-height: 1;
+        }
 
-            a.logo_text {
-                font-size: 4.2rem;
-                display: flex;
-                flex-direction: column;
-                position: fixed;
-                top: 70%;
-                color: #fff;
-                
-                span:last-child {
-                    margin-top: -15px;
-                }
+        &:hover {
 
-                &:hover {
-                    color: #4801ff;
-                    -webkit-text-stroke: 1.5px #fff;
-                    transition: all 0.4s;
-                }
+            h1 {
+                color: $mainColor;
+                -webkit-text-stroke: 0.1px $fontWh;
+                transition: all 0.4s;
+            }
+        }
+    }
+
+    .info_box {
+        display: flex;
+        align-items: center;
+
+        @keyframes textHover {
+             16.65% {
+                transform: translateX(8px);
+              }
+            
+              33.3% {
+                transform: translateX(-6px);
+              }
+            
+              49.95% {
+                transform: translateX(4px);
+              }
+            
+              66.6% {
+                transform: translateX(-2px);
+              }
+            
+              83.25% {
+                transform: translateX(1px);
+              }
+            
+              100% {
+                transform: translateX(0);
+              }
+        }
+
+        a {
+
+            &:hover {
+                animation: textHover 0.7s ease-in-out;
             }
         }
 
-        nav {
-            width: 100%;
-            margin-top: 50px;
+        .text_box {
+            margin-right: 2rem;
+            width: auto;
+            text-wrap: nowrap;
+        }
+
+
+        .info_link {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            width: 100%;
 
-            ul {
+            .left_info {
+                display: flex;
 
-                &.info {
+                div {
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
 
-                    li {
-                        margin-right: 80px;
-                        font-weight: bold;
-
-                        &:first-child {
-                            cursor: default;
-                        }
-
-
-                        &:not(:first-child) {
-                            display: flex;
-                            flex-direction: column;
-                            
-
-                            span:hover {
-                                animation: shake 1.2s infinite;
-                            }
-                        }
-                        
-                        
-                    }
-                }
-
-                &.sns {
-                    
-                    li {
-                        &:hover {
-                            animation: shake 1.2s infinite;
-                        }
+                    &:first-child {
+                        margin-right: 2rem;
                     }
 
                     a {
-                        font-weight: bold;
+                        &:first-child {
+                            margin-bottom: 0.5rem;
+                        }
                     }
                 }
+            }
 
-                li {
-                    font-size: 1.2rem;
-                    font-family: $smallFont;
-                    line-height: 1.8;
-                    white-space:nowrap;
+            .right_info {
+                align-self: flex-end;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        &:first-child {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
                 }
             }
         }
     }
 }
 
+// 메인 링크
 .main {
-    width: 100%;
+    padding: 2rem;
 
     .main_link {
-        margin-top: 80px;
-        margin-right: 100px;
-        perspective: 2500px;
+        perspective: 85rem;
 
-        .title_wrap {
+        li {
+            line-height: 0.9;
             text-align: right;
             transform: rotate3d(0, 1, 0, -40deg) translateZ(0) scale(1);
             transform-origin: right center;
@@ -188,74 +154,49 @@ header {
             will-change: transform;
             transition: all 0.7s;
 
-            &:not(:first-child) {
-                margin-top: -100px;
-            }
-
             &:hover {
                 transform: rotate3d(0, 1, 0, -30deg) translateZ(0) scale(1);
             }
 
-            &:hover .title a {
-                -webkit-text-stroke: 3px #000;
-                color: #4801ff;
+            &:hover a {
+                -webkit-text-stroke: 5px $fontBl;
+                color: $mainColor;
             }
 
-            &:hover .title span {
-                -webkit-text-stroke: 0px #000;
-                color: #000;
+            &:hover span {
+                -webkit-text-stroke: 0px $fontBl;
+                color: $fontBl;
+                
             }
 
-            .title {
+            div {
 
                 a {
-                    color: #000;
-                    font-size: 17rem;
+                    font-size: 11rem;
                     text-transform: uppercase;
-                    font-family: $mainFont;
+                    color: $fontBl;
                     position: relative;
-                    white-space:nowrap;
+                }
 
-                    p {
-                        margin-top: -100px;
+                span {
+                    color: $fontBl;
+
+                    &::before {
+                        content: attr(data-info);
+                        position: absolute;
+                        top: 0;
+                        left: -13rem;
+                        font-size: 1.4rem;
                     }
 
-                    span {
 
-                        &::before {
-                            content: attr(data-info);
-                            position: absolute;
-                            top: 0;
-                            left: -13rem;
-                            font-size: 1.4rem;
-                            font-weight: bold;
-                            font-family: $smallFont;
-                        }
-
-                        &.info_text::before {
-                            left: -11rem;
-                        }
-
-                        &.info_text2::before {
-                            left: -7rem;
-                        }
-
-                        &.info_text3::before {
-                            left: -11.5rem;
-                        }
-
-                        &.info_text4::before {
-                            left: -12.5rem;
-                        }
-
-                        &::after {
-                            content: "";
-                            display: inline-block;
-                            width: 2px;
-                            height: 13.5rem;
-                            background-color: #000;
-                            transform: rotate(25deg);
-                        }
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        width: 2px;
+                        height: 10.5rem;
+                        background-color: $fontBl;
+                        transform: rotate(25deg);
                     }
                 }
             }
@@ -263,506 +204,301 @@ header {
     }
 }
 
-
-.content {
-    width: 100%;
-    height: 100vh;
+// 메인링크 포트폴리오
+.main_box {
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
-    
-    .content_wrap {
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-        
-        .pre_btn {
-            position: absolute;
-            top: 2.9%;
-            right: 3%;
-
-            span {
-                display: inline-block;
-                cursor: pointer;
-                font-size: 5rem;
-                font-weight: bold;
-                position: relative;
-                z-index: 9999;
-                color: #fff;
-                transform: rotate(180deg);
-
-                &:hover {
-                    color: #000;
-                    -webkit-text-stroke: 0.5px #fff;
-                    transition: all 0.3s;
-                }
-            }
-        }
-    }
-}
-
-.slide_wrap {
     width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
+    height: 100vh;
+    display: none;
 
-    .slide_box {
-        position: fixed;
-        top: 55%;
-        transform: translateY(-50%);
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 60vh;
+        height: 100vh;
+        background-color: $fontBl;    
+    }
+
+    .pre_btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
         display: none;
-
-        &:hover img {
-            opacity: 0.8;
-        }
-
-        &:hover .btn_group {
-            opacity: 1;
-        }
-        
-        &.slide_mini6 {
-
-            span {
-                top: -25%;
-
-                &:last-child {
-                    top: -5%;
-                }
-            }
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            transition: all 0.5s;
-        }
-
-        .btn_group {
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.5s;
-
-            a {
-                display: inline-block;
-                border: 3px solid #fff;
-                color: #fff;
-                padding: 12px 20px 10px;
-                margin: 0 20px;
-                font-size: 2rem;
-                text-transform: uppercase;
-                vertical-align: bottom;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: #fff;
-                    color: #000;
-                    border-color: #000;
-                    transition: all 0.3s;
-                }
-            }
-        }
+        cursor: pointer;
 
         span {
-            text-transform: uppercase;
-            position: absolute;
-            top: -20%;
-            right: 8%;
-            font-size: 11rem;
-            color: rgba(255,255, 255, 0);
-            -webkit-text-stroke: 2px #fff;
+            color: $fontWh;
+            display: inline-block;
+            transform: rotate(-180deg);
+            font-size: 4.5rem;
+
+            &:hover {
+                color: $fontBl;
+                -webkit-text-stroke: 2px #fff;
+                transition: all 0.3s;
+            }
         }
+    }
+
+    .port_wrap {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: calc(100% - 17px);
+        height: 20%;
+        background-color: #fff;
     }
 }
 
-.profile {
+// 하단 정보 링크
+.info_link_popup {
+    position: fixed;
     width: 100%;
     height: 100vh;
-    position: fixed;
+    display: none;
     top: 0;
     left: 0;
-    display: none;
+    padding: 2rem;
 
-    .profile_bg {
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 100%;
-        background-color: #4801ff;
+        height: 100vh;
+        background-color: $mainColor;
         opacity: 0.9;
     }
 
-    .profile_wrap {
-        width: 100%;
-        height: 100%;
-        padding: 5%;
-        position: fixed;
-        top: 0;
-        left: 0;
+    .info_link_popup_wrap {
 
         .exit_btn {
-            position: absolute;
-            top: 5.35%;
-            right: 3%;
+            float: right;
 
             span {
                 cursor: pointer;
-                font-size: 3rem;
+                font-size: 3.8rem;
                 position: relative;
                 transition: all 0.3s;
+                line-height: 1;
             }
 
             div.circleBehind span:after {
                 position: absolute;
-                top: 20px;
+                top: 40%;
                 left: 50%;
-                width: 50px;
-                height: 50px;
-                border: 1px solid #fff;
-                transform: translateX(-50%) translateY(-50%) scale(0.8);
+                width: 3.8rem;
+                height: 3.8rem;
+                border: 2px solid $fontWh;
+                transform: translate(-51%, -50%) scale(0.8);
                 border-radius: 50%;
                 background: transparent;
                 content: "";
                 opacity: 0;
                 transition: all 0.3s;
-                z-index: -1;
             }
 
             div.circleBehind span:after {
-                border-width: 1px;
+                border-width: 2px;
                 transition: all 0.4s;
             }
 
             div.circleBehind span:hover:after {
                 opacity: 1;
-                transform: translateX(-50%) translateY(-50%) scale(1.3);
-            }
-        }
-        .profile_content {
-            width: 90%;
-            height: 100%;
-            padding: 10%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-            .profile_text {
-                
-                ul {
-                    font-size: 2rem;
-
-                    &:not(:last-child) {
-                        margin-bottom: 30px;
-
-                    }
-
-                    &:last-child {
-                        li {
-                            &:hover a {
-                                color: #f9e000;
-                            }
-                        }
-                    }
-
-                    li {
-
-                        &:first-child {
-                            font-size: 2.5rem;
-                            margin-bottom: 10px;
-                            border-bottom: 3px solid #fff;
-                        }
-                    }
-
-                }
-            }
-        }
-    }
-}
-
-@keyframes shake {
-    0% {
-      transform: translate(1px, -2px) rotate(-1deg);
-    }
-    10% {
-      transform: translate(-1px, 2px) rotate(-1deg);
-    }
-    20% {
-      transform: translate(1px, 2px) rotate(0deg);
-    }
-    30% {
-      transform: translate(3px, 2px) rotate(0deg);
-    }
-    40% {
-      transform: translate(1px, -1px) rotate(1deg);
-    }
-    50% {
-      transform: translate(-1px, -2px) rotate(-1deg);
-    }
-    60% {
-      transform: translate(-3px, 1px) rotate(0deg);
-    }
-    70% {
-      transform: translate(3px, 1px) rotate(-1deg);
-    }
-    80% {
-      transform: translate(-1px, -1px) rotate(1deg);
-    }
-    90% {
-      transform: translate(-3px, 0px) rotate(1deg);
-    }
-    100% {
-      transform: translate(1px, 1px) rotate(0deg);
-    }
-  }
-
-
-.skill {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-
-    .skill_bg {
-        width: 100%;
-        height: 100%;
-        background-color: #4801ff;
-        opacity: 0.9;
-    }
-
-    .skill_wrap {
-        width: 100%;
-        height: 100%;
-        padding: 5%;
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        .exit_btn {
-            position: absolute;
-            top: 5.35%;
-            right: 3%;
-
-            span {
-                cursor: pointer;
-                font-size: 3rem;
-                position: relative;
-                transition: all 0.3s;
-            }
-
-            div.circleBehind span:after {
-                position: absolute;
-                top: 20px;
-                left: 50%;
-                width: 50px;
-                height: 50px;
-                border: 1px solid #fff;
-                transform: translateX(-50%) translateY(-50%) scale(0.8);
-                border-radius: 50%;
-                background: transparent;
-                content: "";
-                opacity: 0;
-                transition: all 0.3s;
-                z-index: -1;
-            }
-
-            div.circleBehind span:after {
-                border-width: 1px;
-                transition: all 0.4s;
-            }
-
-            div.circleBehind span:hover:after {
-                opacity: 1;
-                transform: translateX(-50%) translateY(-50%) scale(1.3);
+                transform: translate(-51%, -50%) scale(1.3);
             }
         }
 
+        // 프로필박스
+        // .profile_content {
+            
+        // }
+
+        // 스킬박스
         .skill_content {
-            width: 90%;
-            height: 100%;
-            padding: 10%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            height: auto;
+            min-width: 1500px;
 
             h2 {
-                font-size: 3rem;
+                width: 95%;
+                margin: 0 auto;
+                padding-bottom: 0.5rem;
+                font-size: 2.5rem;
+                text-transform: uppercase;
                 text-align: center;
-                border-bottom: 3px solid #fff;
+                border-bottom: 4px solid $fontWh;
             }
 
-            >div {
-                margin-top: 20px;
-                padding: 10px;
-                background-color: #fff;
+            .skill_wrap {
+                background-color: $fontWh;
+                width: 95%;
+                height: 80%;
                 border-radius: 50px;
+                margin: 1.2rem auto 0;
+                padding: 3rem 2rem;
+
+                @keyframes per_95 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 95%;
+                    }
+                }
+
+                @keyframes per_90 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 90%;
+                    }
+                }
+
+                @keyframes per_85 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 85%;
+                    }
+                }
+
+                @keyframes per_80 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 80%;
+                    }
+                }
+
+                @keyframes per_75 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 75%;
+                    }
+                }
+
+                @keyframes per_70 {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 70%;
+                    }
+                }
 
                 ul {
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: space-around;
-                    width: 100%;
-                    margin: 50px auto;
 
                     li {
+                        width: 12%;
+                        margin: 1rem 0.5rem;
                         cursor: pointer;
+                        text-align: center;
 
-                        div {
+                        span {
+                            opacity: 0.3;
+                        }
+
+                        img {
+                            width: 70%;
+                            transition: all 0.5s;
+                        }
+
+                        .bar {
+                            display: inline-block;
                             width: 100%;
-                            display: flex;
-                            flex-wrap: wrap;
-                            justify-content: space-between;
-                            align-items: center;
+                            height: 7px;
+                            position: relative;
 
-                            span {
-                                opacity: 0.3;
-                                transition: all 1s;
+                            &::before {
+                                content: "";
+                                display: inline-block;
+                                width: 100%;
+                                height: 100%;
+                                background-color: lightgrey;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
 
-                                @keyframes per_95 {
-                                    0% {
-                                        width: 0;
-                                    }
-                                    100% {
-                                        width: 95%;
-                                    }
-                                }
-
+                            &::after {
+                                content: "";
+                                display: inline-block;
+                                width: 95%;
+                                height: 100%;
+                                background-color: #f9e000;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
                                 
-                                @keyframes per_90 {
-                                    0% {
-                                        width: 0;
-                                    }
-                                    100% {
-                                        width: 90%;
-                                    }
-                                }
-
-                                @keyframes per_85 {
-                                    0% {
-                                        width: 0;
-                                    }
-                                    100% {
-                                        width: 85%;
-                                    }
-                                }
-
-                                @keyframes per_80 {
-                                    0% {
-                                        width: 0;
-                                    }
-                                    100% {
-                                        width: 80%;
-                                    }
-                                }
-
-                                @keyframes per_75 {
-                                    0% {
-                                        width: 0;
-                                    }
-                                    100% {
-                                        width: 75%;
-                                    }
-                                }
-
-                                @keyframes per_70 {
-                                    0% {
-                                        width: 0;
-                                    }
-                                    100% {
-                                        width: 70%;
-                                    }
-                                }
-
-                                &.bar {
-                                    display: inline-block;
-                                    width: 100%;
-                                    height: 7px;
-                                    position: relative;
-
-                                    &::before {
-                                        content: "";
-                                        display: inline-block;
-                                        width: 100%;
-                                        height: 100%;
-                                        background-color: lightgrey;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                    }
-
-                                    &::after {
-                                        content: "";
-                                        display: inline-block;
-                                        width: 95%;
-                                        height: 100%;
-                                        background-color: #f9e000;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        
-                                    }
-                                }
-
-                                &.js_bar, &.git_bar, &.figma_bar {
-                            
-                                    &::after {
-                                        width: 85%;
-                                    }
-                                }
-
-                                &.jq_bar, &.json_bar, &.ajax_bar {
-                            
-                                    &::after {
-                                        width: 90%;
-                                    }
-                                }
-
-                                &.vue_bar, &.sql_bar {
-                            
-                                    &::after {
-                                        width: 75%;
-                                    }
-                                }
-
-                                &.react_bar {
-                            
-                                    &::after {
-                                        width: 70%;
-                                    }
-                                }
-
-                                &.ph_bar, &.il_bar {
-
-                                    &::after {
-                                        width: 80%;
-                                    }
-                                }
-
-                                &.per {
-                                    display: inline-block;
-                                    width: 100%;
-                                    color: #000;
-                                    font-size: 1.2rem;
-                                    text-align: center;
-                                }
                             }
                         }
 
-                        &:hover img {
-                            animation: shake 1.3s infinite;
+                        .js_bar, .git_bar, .figma_bar {
+                    
+                            &::after {
+                                width: 85%;
+                            }
+                        }
+
+                        .jq_bar, .json_bar, .ajax_bar {
+                    
+                            &::after {
+                                width: 90%;
+                            }
+                        }
+
+                        .vue_bar, .sql_bar {
+                    
+                            &::after {
+                                width: 75%;
+                            }
+                        }
+
+                        .react_bar {
+                    
+                            &::after {
+                                width: 70%;
+                            }
+                        }
+
+                        .ph_bar, .il_bar {
+
+                            &::after {
+                                width: 80%;
+                            }
+                        }
+
+                        .per {
+                            display: inline-block;
+                            width: 100%;
+                            color: #000;
+                            font-size: 1.2rem;
+                            text-align: center;
                         }
 
                         &:hover span {
                             opacity: 1;
+                        }
+
+                        &:hover img {
+                            transform: translateY(-10px) scale(1.1);
                         }
 
                         &:hover .bar::after {
@@ -794,15 +530,10 @@ header {
                         &:hover .react_bar::after {
                             animation: per_70 2s forwards;
                         }
-                        
-                        img {
-                            width: 90px;
-                        }
                     }
                 }
             }
         }
     }
 }
-
 
